@@ -1,4 +1,45 @@
-<header class="h-[100px] flex items-center justify-around">
+<script>
+  let isNavOpen = false;
+
+  function toggleNav() {
+    isNavOpen = !isNavOpen;
+  }
+</script>
+
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<nav class={isNavOpen ? "open" : ""}>
+  <div id="test">hi</div>
+  <div
+    id="sidebar"
+    on:click={toggleNav}
+    class="flex items-center justify-end gap-[16px] text-white cursor-pointer pt-[35px] pr-[70px]"
+  >
+    <h1 id="menu">CLOSE</h1>
+    <svg
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.1749 0.0249939L0.0249023 1.17499L13.8499 15L0.0249023 28.825L1.1749 29.975L14.9999 16.15L28.8249 29.975L29.9749 28.825L16.1499 15L29.9749 1.17499L28.8249 0.0249939L14.9999 13.85L1.1749 0.0249939Z"
+        fill="#BBBBBB"
+      />
+    </svg>
+  </div>
+  <div class="pl-[60px]">
+    <ul class="text-white pt-[100px] text-[48px]">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Mint</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="h-[100px] flex items-center justify-between mx-[70px]">
   <img
     id="logo"
     class="max-w-[40px] max-h-[40px]"
@@ -6,7 +47,11 @@
     alt="nomad-logo"
   />
 
-  <div class="flex items-center gap-[16px] text-white">
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <div
+    on:click={toggleNav}
+    class="flex items-center gap-[16px] text-white cursor-pointer"
+  >
     <h1 id="menu">MENU</h1>
     <svg
       width="40"
@@ -44,4 +89,35 @@
     cursor: pointer;
     font-size: 16px;
   }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -60%;
+    width: 60%;
+    height: 100%;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+  }
+
+  nav.open {
+    right: 0;
+  }
+
+  /*
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0 0 20px;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  } */
 </style>

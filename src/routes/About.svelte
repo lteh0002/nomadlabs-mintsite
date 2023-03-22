@@ -1,4 +1,4 @@
-<div class="pt-[40px] px-[350px]">
+<div class="pt-[150px] px-[350px]">
   <div class="flex flex-col gap-[150px]">
     <div class="flex gap-[110px] justify-center">
       <img class="w-[600px] h-[600px] rounded-[50px]" src="/ufo.jpeg" alt="" />
@@ -58,7 +58,11 @@
           </p>
         </div>
       </div>
-      <img class="w-[600px] h-[600px] rounded-[50px]" src="bluesky.jpeg" alt="" />
+      <img
+        class="w-[600px] h-[600px] rounded-[50px]"
+        src="bluesky.jpeg"
+        alt=""
+      />
     </div>
 
     <div class="flex justify-center">

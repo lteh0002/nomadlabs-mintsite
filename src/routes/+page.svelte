@@ -1,3 +1,7 @@
+<script>
+  import Header from "./Header.svelte";
+</script>
+
 <img id="background" src="landing-bg.jpeg" alt="background-1" />
 
 <div id="landingpage" class="flex flex-col justify-between">
