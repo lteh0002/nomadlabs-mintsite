@@ -45,21 +45,9 @@
 
 <style>
   #contact {
-    min-height: 600px;
+    min-height: 900px;
+    height: 900px;
   }
-
-  /* #background {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: cover;
-    margin: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-  } */
 
   #contact {
     background-image: linear-gradient(
