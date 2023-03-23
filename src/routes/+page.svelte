@@ -143,7 +143,7 @@
   #landingpage {
     min-height: 100vh;
     height: 100%;
-    background-image: url("landing-bg.jpeg");
+    background-image: url("/landing-bg.jpeg");
     background-position: center;
     background-size: cover;
   }

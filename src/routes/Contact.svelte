@@ -55,7 +55,7 @@
         rgba(239, 239, 240, 0.194),
         rgba(34, 21, 31, 0.73)
       ),
-      url("spaceman.jpeg");
+      url("/spaceman.jpeg");
     background-position: center;
     background-size: cover;
   }
