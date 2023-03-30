@@ -1,4 +1,5 @@
 <script>
+  import Header from "./Header.svelte";
   import About from "./About.svelte";
   import Contact from "./Contact.svelte";
 </script>
@@ -6,6 +7,7 @@
 <div>
   <div>
     <div id="landingpage" class="flex flex-col justify-between sticky">
+      <Header/>
       <div class="flex flex-col items-center justify-center flex-1 gap-[48px]">
         <img class="w-[362px] h-[88px]" src="nl-fulllogo.png" alt="" />
         <h1 id="desc">Navigating the Web 3 Universe</h1>
