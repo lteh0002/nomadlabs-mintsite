@@ -59,7 +59,7 @@
 
 <header
   id="nav"
-  class="h-[100px] flex items-center justify-between px-[70px] z-50 sticky-nav {isPageTop
+  class="h-[100px] flex items-center justify-around px-[70px] z-50 sticky-nav {isPageTop
     ? ''
     : 'background'}"
 >
@@ -110,8 +110,8 @@
   nav {
     position: fixed;
     top: 0;
-    right: -60%;
-    width: 60%;
+    right: -50%;
+    width: 50%;
     height: 100%;
     background-color: #333;
     transition: all 0.5s ease-in-out;
