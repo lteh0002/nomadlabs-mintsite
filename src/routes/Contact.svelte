@@ -45,8 +45,8 @@
 
 <style>
   #contact {
-    min-height: 900px;
-    height: 900px;
+    min-height: 750px;
+    height: 750px;
   }
 
   #contact {

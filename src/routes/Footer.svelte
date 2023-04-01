@@ -1,4 +1,4 @@
-<div class="flex justify-center items-center min-[100px] h-[100px] bg-black">
+<div class="flex justify-center items-center h-[100px] bg-black min-w-[100vw]">
   <h1 class="text-[16px] text-[#BBBBBB]">
     Copyright 2023 Nomad Labs. All Rights Reserved.
   </h1>

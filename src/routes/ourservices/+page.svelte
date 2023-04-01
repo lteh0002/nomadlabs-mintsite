@@ -1,5 +1,7 @@
 <script>
   import { onMount } from "svelte";
+  import NormalHeader from "../NormalHeader.svelte";
+  import Contact from "../Contact.svelte";
   onMount(async () => {
     const indicators = document.getElementsByClassName("indicator");
     const buttons = document.getElementsByClassName("btn");
@@ -14,8 +16,79 @@
   });
 </script>
 
-<div class="bg-[#111111]">
-  <div class="carousel w-full mt-[100px] ">
+<NormalHeader />
+<div class="bg-[#111111] min-w-[100vw]">
+  <div
+    class="flex flex-1 justify-between items-center bg-[#111111] min-w-[100vw] max-h-screen"
+  >
+    <div class="flex justify-center min-w-[50%] h-full w-full">
+      <div class="flex flex-col gap-[20px] text-white">
+        <h1 class="text-[48px]">Services</h1>
+        <svg
+          width="160"
+          height="12"
+          viewBox="0 0 160 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_21_234)">
+            <path
+              d="M160 4.8365V7.11787H31.7627C31.5687 7.79087 31.215 8.25855 30.8043 8.25855C30.3936 8.25855 30.0285 7.81369 29.8345 7.11787H18.2544C18.0832 8.44106 17.6269 9.39924 17.1135 9.39924C16.6001 9.39924 16.1323 8.46388 15.9726 7.11787H5.09979C4.87161 9.86692 3.83339 11.9544 2.5784 11.9544C1.32341 11.9544 0.285187 9.91255 0.0570068 7.1635V4.88213C0.285187 2.08745 1.32341 0 2.5784 0C3.83339 0 4.8602 2.08745 5.09979 4.8365H15.9726C16.1437 3.51331 16.6001 2.55513 17.1135 2.55513C17.6269 2.55513 18.0947 3.49049 18.2544 4.8365H29.8345C30.0285 4.1635 30.3936 3.69582 30.8043 3.69582C31.215 3.69582 31.5687 4.14068 31.7627 4.8365H160Z"
+              fill="#666666"
+            />
+            <path
+              d="M0.0577054 4.8365V7.11787C0.0344758 6.73797 0.0344758 6.35709 0.0577054 5.97719C0.0344758 5.59729 0.0344758 5.2164 0.0577054 4.8365Z"
+              fill="#666666"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_21_234">
+              <rect width="160" height="12" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+        <ul class="list-disc list-inside">
+          <li class="text-[18px]">UI/UX Design</li>
+          <li>Web3 Solutions</li>
+          <li>Branding & Identity</li>
+          <li>Custom Development</li>
+          <li>Website Design & Development</li>
+          <li>Launchpad (Coming Soon)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex min-w-[50%]">
+      <img src="/floatingspaceman.jpeg" class="min-w-full min-h-full" alt="" />
+    </div>
+  </div>
+  <div class="flex flex-col items-center gap-[20px] pt-[100px]">
+    <h1 class="text-white text-[48px]">What We Do</h1>
+    <svg
+      width="141"
+      height="9"
+      viewBox="0 0 141 9"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_21_334)">
+        <path
+          d="M140.19 3.89562V5.48228H84.13C83.98 6.38009 83.58 7.03023 83.13 7.03023C82.68 7.03023 82.27 6.38783 82.13 5.48228H72.33C72.13 7.34756 71.21 8.76394 70.12 8.76394C69.03 8.76394 68.12 7.34756 67.91 5.48228H58.12C57.97 6.38009 57.57 7.03023 57.12 7.03023C56.67 7.03023 56.26 6.38783 56.12 5.48228H0V3.93432H56.11C56.26 3.04425 56.65 2.38637 57.11 2.38637C57.57 2.38637 57.96 3.01329 58.11 3.93432H67.89C68.09 2.0226 69 0.621704 70.1 0.621704C71.2 0.621704 72.1 2.0226 72.31 3.89562H82.12C82.27 3.00555 82.66 2.34767 83.12 2.34767C83.58 2.34767 83.97 2.97459 84.12 3.89562H140.19Z"
+          fill="#666666"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_21_334">
+          <rect
+            width="140.19"
+            height="8.14223"
+            fill="white"
+            transform="translate(0 0.621704)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  </div>
+  <div class="carousel w-full mt-[60px] ">
     <div
       id="slide1"
       class="carousel-item relative w-full flex justify-center overflow-hidden"
@@ -269,13 +342,14 @@
       </div>
     </div>
   </div>
-  <div class="carousel-indicators mt-[40px]">
+  <div class="carousel-indicators mt-[40px] mb-[80px]">
     <div class="indicator slideone active" />
     <div class="indicator slidetwo" />
     <div class="indicator slidethree" />
     <div class="indicator slidefour" />
     <!-- <div class="indicator slideone"></div> -->
   </div>
+  <Contact />
 </div>
 
 <style>

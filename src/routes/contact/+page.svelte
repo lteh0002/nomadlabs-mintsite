@@ -3,8 +3,8 @@
 </script>
 
 <NormalHeader />
-<div class="flex flex-1 min-h-screen justify-between items-center bg-[#111111]">
-  <div class="flex justify-center min-w-[45%] h-full w-full">
+<div class="flex min-h-screen items-center bg-[#111111] min-w-[100vw]">
+  <div class="flex justify-center min-w-[50%] h-full w-full">
     <div class="flex flex-col gap-[20px] text-white">
       <h1 class="text-[48px]">Talk to Us</h1>
       <svg
@@ -39,6 +39,6 @@
     </div>
   </div>
   <div class="flex justify-center">
-    <img src="/floatingspaceman.jpeg" class="min-w-[880px] min-h-full" alt="" />
+    <img src="/floatingspaceman.jpeg" class="min-w-[50%] min-h-full" alt="" />
   </div>
 </div>

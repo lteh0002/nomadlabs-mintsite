@@ -48,11 +48,11 @@
   </div>
   <div class="pl-[60px]">
     <ul class="text-white pt-[100px] text-[48px]">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Mint</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">About</a></li>
+      <li><a href="/ourservices">Services</a></li>
+      <li><a href="/mint">Mint</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </div>
 </nav>

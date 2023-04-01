@@ -48,18 +48,18 @@
   </div>
   <div class="pl-[60px]">
     <ul class="text-white pt-[100px] text-[48px]">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Mint</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">About</a></li>
+      <li><a href="/ourservices">Services</a></li>
+      <li><a href="/mint">Mint</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </div>
 </nav>
 
 <header
   id="nav"
-  class="h-[100px] flex items-center justify-between px-[70px] z-50 sticky-nav background"
+  class="h-[100px] flex items-center justify-around px-[70px] z-50 sticky-nav background"
 >
   <img
     id="logo"
@@ -108,8 +108,8 @@
   nav {
     position: fixed;
     top: 0;
-    right: -60%;
-    width: 60%;
+    right: -50%;
+    width: 50%;
     height: 100%;
     background-color: #333;
     transition: all 0.5s ease-in-out;
@@ -121,10 +121,10 @@
   }
 
   .sticky-nav {
-    /* position: fixed; */
+    position: relative;
     width: 100vw;
-    /* top: 0; */
-    /* transition: all 0.5s ease-in-out; */
+    top: 0;
+    transition: all 0.5s ease-in-out;
   }
 
   .background {
