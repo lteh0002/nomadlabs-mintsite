@@ -1,19 +1,39 @@
 <script>
-  // import { onMount } from "svelte";
+  import { onMount } from "svelte";
+  import { goto } from "$app/navigation";
   import NormalHeader from "../NormalHeader.svelte";
   import Contact from "../Contact.svelte";
-  // onMount(async () => {
-  //   const indicators = document.getElementsByClassName("indicator");
-  //   const buttons = document.getElementsByClassName("btn");
-  //   console.log(indicators);
-  //   console.log(buttons);
+  onMount(async () => {
+    const indicators = Array.from(document.getElementsByClassName("indicator"));
+    const buttons = Array.from(document.getElementsByClassName("btn"));
 
-  //   console.log(buttons[0]);
-  //   buttons[1].addEventListener("click", () => {
-  //     indicators[0].classList.remove("active");
-  //     indicators[1].classList.add("active");
-  //   });
-  // });
+    buttons.forEach((button, i) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (i == 1 || i == 4) {
+          indicators[0].classList.remove("active");
+          indicators[2].classList.remove("active");
+          indicators[1].classList.add("active");
+          goto("#slide2");
+        } else if (i == 2 || i == 7) {
+          indicators[1].classList.remove("active");
+          indicators[3].classList.remove("active");
+          indicators[0].classList.add("active");
+          goto("#slide1");
+        } else if (i == 3 || i == 6) {
+          indicators[1].classList.remove("active");
+          indicators[3].classList.remove("active");
+          indicators[2].classList.add("active");
+          goto("#slide3");
+        } else if (i == 0 || i == 5) {
+          indicators[0].classList.remove("active");
+          indicators[2].classList.remove("active");
+          indicators[3].classList.add("active");
+          goto("#slide4")
+        }
+      });
+    });
+  });
 </script>
 
 <NormalHeader />
@@ -353,6 +373,10 @@
 </div>
 
 <style>
+  .carousel {
+    overflow-x: hidden;
+  }
+
   .description {
     font-family: "Open Sans", sans-serif;
     text-align: justify;
