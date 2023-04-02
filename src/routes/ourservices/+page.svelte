@@ -17,7 +17,7 @@
 </script>
 
 <NormalHeader />
-<div class="bg-[#111111] min-w-[100vw]">
+<div id="slide" class="bg-[#111111] min-w-[100vw]">
   <div
     class="flex flex-1 justify-between items-center bg-[#111111] min-w-[100vw] max-h-screen"
   >
