@@ -1,23 +1,23 @@
 <script>
-  import { onMount } from "svelte";
+  // import { onMount } from "svelte";
   import NormalHeader from "../NormalHeader.svelte";
   import Contact from "../Contact.svelte";
-  onMount(async () => {
-    const indicators = document.getElementsByClassName("indicator");
-    const buttons = document.getElementsByClassName("btn");
-    console.log(indicators);
-    console.log(buttons);
+  // onMount(async () => {
+  //   const indicators = document.getElementsByClassName("indicator");
+  //   const buttons = document.getElementsByClassName("btn");
+  //   console.log(indicators);
+  //   console.log(buttons);
 
-    console.log(buttons[0]);
-    buttons[1].addEventListener("click", () => {
-      indicators[0].classList.remove("active");
-      indicators[1].classList.add("active");
-    });
-  });
+  //   console.log(buttons[0]);
+  //   buttons[1].addEventListener("click", () => {
+  //     indicators[0].classList.remove("active");
+  //     indicators[1].classList.add("active");
+  //   });
+  // });
 </script>
 
 <NormalHeader />
-<div id="slide" class="bg-[#111111] min-w-[100vw]">
+<div class="bg-[#111111] min-w-[100vw]">
   <div
     class="flex flex-1 justify-between items-center bg-[#111111] min-w-[100vw] max-h-screen"
   >
@@ -159,7 +159,7 @@
       <div
         class="flex items-center border w-full gap-[10px] rounded-2xl mx-[30vw]"
       >
-        <div class="px-[70px]">
+        <div class="px-[70px] py-[40px]">
           <img
             src="/landing-bg.jpeg"
             class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
@@ -212,7 +212,7 @@
         class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
       >
         <a href="#slide1" class="btn btn-circle">❮</a>
-        <a href="#slide" class="btn btn-circle">❯</a>
+        <a href="#slide3" class="btn btn-circle">❯</a>
       </div>
     </div>
     <div
@@ -222,7 +222,7 @@
       <div
         class="flex items-center border w-full gap-[10px] rounded-2xl mx-[30vw]"
       >
-        <div class="px-[70px]">
+        <div class="px-[70px] py-[40px]">
           <img
             src="/landing-bg.jpeg"
             class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
@@ -285,7 +285,7 @@
       <div
         class="flex items-center border w-full gap-[10px] rounded-2xl mx-[30vw]"
       >
-        <div class="px-[70px]">
+        <div class="px-[70px] py-[40px]">
           <img
             src="/landing-bg.jpeg"
             class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
