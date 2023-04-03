@@ -1,28 +1,9 @@
 <script>
-  // import { onMount } from "svelte";
-  let isPageTop = true;
+  import { navigation } from "./../utils/nav.js";
   let isNavOpen = false;
   function toggleNav() {
     isNavOpen = !isNavOpen;
   }
-
-  // onMount(async () => {
-  //   const header = document.getElementById("nav");
-
-  //   window.onscroll = function () {
-  //     if (window.pageYOffset > 0) {
-  //       isPageTop = false;
-  //     } else {
-  //       isPageTop = true;
-  //     }
-
-  //     if (isPageTop) {
-  //       header.classList.remove("background");
-  //     } else {
-  //       header.classList.add("background");
-  //     }
-  //   };
-  // });
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -48,11 +29,35 @@
   </div>
   <div class="pl-[60px]">
     <ul class="text-white pt-[100px] text-[48px]">
-      <li><a href="/">Home</a></li>
-      <li><a href="/">About</a></li>
-      <li><a href="/ourservices">Services</a></li>
-      <li><a href="/mint">Mint</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li>
+        <a class={$navigation == "home" ? "text-[white]" : "text-[grey]"} href="/"
+          >Home <span class="{$navigation == "home" ? 'inline-block' : "hidden"}">•</span></a
+        >
+      </li>
+      <li>
+        <a
+          class={$navigation == "about" ? "text-[white]" : "text-[grey]"}
+          href="/">About <span class="{$navigation == "about" ? 'inline-block' : "hidden"}">•</span></a
+        >
+      </li>
+      <li>
+        <a
+          class={$navigation == "service" ? "text-[white]" : "text-[grey]"}
+          href="/ourservices">Services <span class="{$navigation == "service" ? 'inline-block' : "hidden"}">•</span></a
+        >
+      </li>
+      <li>
+        <a
+          class={$navigation == "mint" ? "text-[white]" : "text-[grey]"}
+          href="/mint">Mint <span class="{$navigation == "mint" ? 'inline-block' : "hidden"}">•</span></a
+        >
+      </li>
+      <li>
+        <a
+          class={$navigation == "contact" ? "text-[white]" : "text-[grey]"}
+          href="/contact">Contact <span class="{$navigation == "contact" ? 'inline-block' : "hidden"}">•</span></a
+        >
+      </li>
     </ul>
   </div>
 </nav>

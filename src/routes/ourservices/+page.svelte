@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import {navigation} from "./../../utils/nav.js"
   import { goto } from "$app/navigation";
   import NormalHeader from "../NormalHeader.svelte";
   import Contact from "../Contact.svelte";
@@ -29,11 +30,16 @@
           indicators[0].classList.remove("active");
           indicators[2].classList.remove("active");
           indicators[3].classList.add("active");
-          goto("#slide4")
+          goto("#slide4");
         }
       });
     });
   });
+
+
+  navigation.reset()
+  navigation.service();
+  console.log($navigation)
 </script>
 
 <NormalHeader />
@@ -69,11 +75,11 @@
         </svg>
         <ul class="list-disc list-inside">
           <li class="text-[18px]">UI/UX Design</li>
-          <li>Web3 Solutions</li>
-          <li>Branding & Identity</li>
-          <li>Custom Development</li>
-          <li>Website Design & Development</li>
-          <li>Launchpad (Coming Soon)</li>
+          <li class="text-[18px]">Web3 Solutions</li>
+          <li class="text-[18px]">Branding & Identity</li>
+          <li class="text-[18px]">Custom Development</li>
+          <li class="text-[18px]">Website Design & Development</li>
+          <li class="text-[18px]">Launchpad (Coming Soon)</li>
         </ul>
       </div>
     </div>

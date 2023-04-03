@@ -1,5 +1,8 @@
 <script>
   import NormalHeader from "../NormalHeader.svelte";
+  import {navigation} from "./../../utils/nav.js"
+  navigation.reset()
+  navigation.mint()
 </script>
 
 <NormalHeader />
