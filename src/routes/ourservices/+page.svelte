@@ -128,7 +128,7 @@
       </defs>
     </svg>
   </div>
-  <div class="carousel w-full bg-[#111111] mt-[60px] overflow-x-scroll">
+  <div class="carousel w-full bg-[#111111] mt-[60px]">
     {#if browser}
       <Carousel arrows={true} dots={true} swiping={true} bind:this={carousel}>
         <div
@@ -390,9 +390,9 @@
 </div>
 
 <style>
-  .carousel {
-    touch-action: pan-x;
-  }
+  /* .carousel {
+    overflow-x: scroll !important;
+  } */
 
   .description {
     font-family: "Open Sans", sans-serif;
