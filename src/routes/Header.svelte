@@ -1,10 +1,31 @@
 <script>
   import { onMount } from "svelte";
+  import { goto } from "$app/navigation";
   import { navigation } from "./../utils/nav.js";
   let isPageTop = true;
   let isNavOpen = false;
+
   function toggleNav() {
+    const overlay = document.getElementById("overlay");
     isNavOpen = !isNavOpen;
+    if (isNavOpen == true) {
+      overlay.style.display = "block";
+    } else if (isNavOpen == false) {
+      overlay.style.display = "none";
+    }
+    closeOverlay();
+  }
+
+  function closeOverlay() {
+    const overlay = document.getElementById("overlay");
+    overlay.addEventListener("click", () => {
+      overlay.style.display = "none";
+      isNavOpen = false;
+    });
+  }
+
+  function backHome() {
+    goto("/");
   }
 
   onMount(async () => {
@@ -26,6 +47,8 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
+<div on:click={closeOverlay} id="overlay" />
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <nav class={isNavOpen ? "open" : ""}>
   <div
     id="sidebar"
@@ -46,35 +69,52 @@
       />
     </svg>
   </div>
+
   <div class="pl-[60px]">
     <ul class="text-white pt-[100px] text-[48px]">
       <li>
-        <a class={$navigation == "home" ? "text-[white]" : "text-[grey]"} href="/"
-          >Home <span class="{$navigation == "home" ? 'inline-block' : ""}">•</span></a
+        <a
+          class={$navigation == "home" ? "text-[white]" : "text-[grey]"}
+          href="/"
+          >Home <span class={$navigation == "home" ? "inline-block" : ""}
+            >•</span
+          ></a
         >
       </li>
       <li>
         <a
           class={$navigation == "about" ? "text-[white]" : "text-[grey]"}
-          href="/">About <span class="{$navigation == "about" ? 'inline-block' : "hidden"}">•</span></a
+          href="/"
+          >About <span
+            class={$navigation == "about" ? "inline-block" : "hidden"}>•</span
+          ></a
         >
       </li>
       <li>
         <a
           class={$navigation == "service" ? "text-[white]" : "text-[grey]"}
-          href="/ourservices">Services <span class="{$navigation == "service" ? 'inline-block' : "hidden"}">•</span></a
+          href="/ourservices"
+          >Services <span
+            class={$navigation == "service" ? "inline-block" : "hidden"}>•</span
+          ></a
         >
       </li>
       <li>
         <a
           class={$navigation == "mint" ? "text-[white]" : "text-[grey]"}
-          href="/mint">Mint <span class="{$navigation == "mint" ? 'inline-block' : "hidden"}">•</span></a
+          href="/mint"
+          >Mint <span class={$navigation == "mint" ? "inline-block" : "hidden"}
+            >•</span
+          ></a
         >
       </li>
       <li>
         <a
           class={$navigation == "contact" ? "text-[white]" : "text-[grey]"}
-          href="/contact">Contact <span class="{$navigation == "contact" ? 'inline-block' : "hidden"}">•</span></a
+          href="/contact"
+          >Contact <span
+            class={$navigation == "contact" ? "inline-block" : "hidden"}>•</span
+          ></a
         >
       </li>
     </ul>
@@ -87,9 +127,11 @@
     ? ''
     : 'background'}"
 >
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
   <img
+    on:click={backHome}
     id="logo"
-    class="max-w-[40px] max-h-[40px]"
+    class="max-w-[40px] max-h-[40px] cursor-pointer"
     src="NL-BW.png"
     alt="nomad-logo"
   />
@@ -139,7 +181,7 @@
     height: 100%;
     background-color: #333;
     transition: all 0.5s ease-in-out;
-    z-index: 100;
+    z-index: 700;
   }
 
   nav.open {
@@ -150,10 +192,21 @@
     position: fixed;
     width: 100vw;
     top: 0;
-    transition: all 0.5s ease-in-out;
+    /* transition: all 0.5s ease-in-out; */
   }
 
   .background {
     background-color: #111111;
+  }
+
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
   }
 </style>

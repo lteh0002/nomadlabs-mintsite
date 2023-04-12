@@ -83,43 +83,45 @@
         <div class="mt-[65px]">
           <div class="flex gap-[70px] mb-[150px]">
             <div
-              class="text-white w-[250px] h-[300px] border flex flex-col justify-center border-round px-[25px] mb-[40px]"
+              class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] border-round px-[25px] mb-[40px]"
             >
-              <h1 class="text-[24px]">01 - Passionate</h1>
-              <p class="description">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
+              <h1 class="text-[24px]">01 - Hassle Free</h1>
+              <p class="description-about-us">
+                Allow us to take the wheel and guide you through the new found
+                world of Web3 technology. From contract development to web
+                design and advisory. We have everything you need to take your
+                first steps into the blockchain.
               </p>
             </div>
             <div
-              class="text-white w-[250px] h-[300px] border flex flex-col justify-center m-[auto] border-round px-[25px]"
+              class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[40px] m-[auto] border-round px-[25px]"
             >
               <h1 class="text-[24px]">02 - Innovative</h1>
-              <p class="description">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
+              <p class="description-about-us">
+                We are constantly exploring new technologies and solutions to
+                provide our community with the most innovative and cutting-edge
+                products and services.
               </p>
             </div>
             <div
-              class="text-white w-[250px] h-[300px] border flex flex-col justify-center m-[auto] border-round px-[25px] mb-[40px]"
+              class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] m-[auto] border-round px-[25px] mb-[40px]"
             >
               <h1 class="text-[24px]">03 - Communication</h1>
-              <p class="description">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
+              <p class="description-about-us">
+                We believe in open and honest communication with our community
+                and clients, ensuring that everyone is informed and engaged
+                every step of the way.
               </p>
             </div>
             <div
-              class="text-white w-[250px] h-[300px] border flex flex-col justify-center m-[auto] border-round px-[25px]"
+              class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] m-[auto] border-round px-[25px]"
             >
               <h1 class="text-[24px]">04 - Transparency</h1>
-              <p class="description">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
+              <p class="description-about-us">
+                We pride ourselves on being transparent in everything we do,
+                from our development process to our business practices. We
+                believe that transparency builds trust and strengthens our
+                relationships with our community.
               </p>
             </div>
           </div>
@@ -138,6 +140,14 @@
     font-family: "Open Sans", sans-serif;
     padding-top: 35px;
     text-align: justify;
+  }
+
+  .description-about-us {
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    padding-top: 10px;
+    text-align: justify;
+    max-width: 190px;
   }
 
   .border-round {

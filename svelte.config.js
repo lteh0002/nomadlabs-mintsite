@@ -4,9 +4,13 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: adapter()
-  },
-  preprocess: vitePreprocess()
-};
+    adapter: adapter(),
+    // vite: {
+    //   optimizeDeps: {
+    //     include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
+    //   },
+    },
+    preprocess: vitePreprocess()
+  }
 
 export default config;

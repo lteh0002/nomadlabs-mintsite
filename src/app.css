@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --sc-arrow-size: 4px !important;
+}
+
 * {
   font-family: 'Oswald', sans-serif;
 }
@@ -11,4 +15,54 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+.testing {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.indicator-size {
+  border-radius: 50%;
+  background-color: gray !important;
+  margin: 0 10px;
+}
+
+.sc-carousel-dot__dot.svelte-yu7247 {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.sc-carousel-dot__dot.svelte-yu7247:focus {
+  outline: none !important;
+}
+
+.sc-carousel-dots__container.svelte-1oj5bge {
+  gap: 15px !important;
+}
+
+.sc-carousel-dot__dot_active {
+  background-color: white !important;
+}
+
+.sc-carousel-arrow__arrow.svelte-9ztt4p {
+  border: solid #fff !important;
+  border-width: 0 var(--sc-arrow-size) var(--sc-arrow-size) 0 !important;
+}
+
+.sc-carousel-button {
+  /* margin: 0 30px !important; */
+  border: none !important;
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
+.sc-carousel-arrow__circle {
+  margin: 0 30px !important;
+  background-color: #111111 !important;
+  font-size: 10px !important;
+}
+
+.sc-carousel-button:focus {
+  outline: none !important;
 }

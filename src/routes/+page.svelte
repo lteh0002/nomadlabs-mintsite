@@ -4,9 +4,8 @@
   import About from "./About.svelte";
   import Contact from "./Contact.svelte";
 
-  navigation.reset()
+  navigation.reset();
   navigation.home();
-
 </script>
 
 <div>
