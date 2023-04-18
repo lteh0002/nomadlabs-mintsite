@@ -1,7 +1,10 @@
 <script>
   import Header from "./Header.svelte";
   import { navigation } from "./../utils/nav.js";
-  import About from "./About.svelte";
+  import GenesisCollection from "./GenesisCollection.svelte";
+  import Roadmap from "./Roadmap.svelte";
+  import Utility from "./Utility.svelte";
+  import Explore from "./Explore.svelte";
   import Contact from "./Contact.svelte";
 
   navigation.reset();
@@ -42,7 +45,10 @@
         <h1 id="scroll-prompt" class="text-white">SCROLL DOWN</h1>
       </div>
     </div>
-    <About />
+    <GenesisCollection />
+    <Roadmap />
+    <Utility />
+    <Explore />
     <Contact />
   </div>
 </div>
@@ -51,7 +57,7 @@
   #landingpage {
     min-height: 100vh;
     height: 100%;
-    background-image: url("/landing-bg.jpeg");
+    background-image: url("/background.jpg");
     background-position: center;
     background-size: cover;
   }

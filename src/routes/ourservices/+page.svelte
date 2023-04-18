@@ -13,11 +13,10 @@
   function goToPreviousPage() {
     carousel.goToPrev();
   }
+  
   import NormalHeader from "../NormalHeader.svelte";
   import Contact from "../Contact.svelte";
   onMount(async () => {
-    const indicators = Array.from(document.getElementsByClassName("indicator"));
-    // const buttons = Array.from(document.getElementsByClassName("btn"));
     const indicatorActive = Array.from(
       document.getElementsByClassName("sc-carousel-dot__dot_active")
     );
@@ -28,28 +27,28 @@
     indicatorActive[0].classList.add("indicator-size");
     btnContainer[0].classList.add("testing");
 
-    // buttons.forEach((button, i) => {
-    //   button.addEventListener("click", (e) => {
-    //     e.preventDefault();
-    //     if (i == 1 || i == 4) {
-    //       indicators[0].classList.remove("active");
-    //       indicators[2].classList.remove("active");
-    //       indicators[1].classList.add("active");
-    //     } else if (i == 2 || i == 7) {
-    //       indicators[1].classList.remove("active");
-    //       indicators[3].classList.remove("active");
-    //       indicators[0].classList.add("active");
-    //     } else if (i == 3 || i == 6) {
-    //       indicators[1].classList.remove("active");
-    //       indicators[3].classList.remove("active");
-    //       indicators[2].classList.add("active");
-    //     } else if (i == 0 || i == 5) {
-    //       indicators[0].classList.remove("active");
-    //       indicators[2].classList.remove("active");
-    //       indicators[3].classList.add("active");
-    //     }
-    //   });
-    // });
+    const test = Array.from(document.getElementsByClassName('sc-carousel__pages-window'))
+    const indicator = document.getElementsByClassName('sc-carousel-dot__dot')
+    const pagesContainer = document.getElementsByClassName('sc-carousel__pages-container')
+    // console.log(pagesContainer[0])
+    test[0].addEventListener('scroll', function() {
+      let scrollLeft = test[0].scrollLeft;
+      console.log('Horizontal scroll position:', scrollLeft);
+      let slideWidth = pagesContainer[0].offsetWidth
+      // console.log(pagesContainer[0].offsetWidth)
+      if (scrollLeft <= slideWidth/2 && scrollLeft > 0) {
+        indicator[0].classList.add('sc-carousel-dot__dot_active')
+        indicator[1].classList.remove('sc-carousel-dot__dot_active')
+        pagesContainer[0].style.transform = `translateX(` + (slideWidth - scrollLeft) + 'px)';
+        pagesContainer[0].style.transitionDuration = '500ms';
+        scrollLeft = 0
+      } else if (scrollLeft >= slideWidth/2) {
+        indicator[0].classList.remove('sc-carousel-dot__dot_active')
+        indicator[1].classList.add('sc-carousel-dot__dot_active')
+        pagesContainer[0].style.transform = `translateX(` + (slideWidth*-1 + scrollLeft) + 'px)'
+        pagesContainer[0].style.transitionDuration = '500ms';
+      }
+    });
   });
 
   navigation.reset();
@@ -130,7 +129,7 @@
   </div>
   <div class="carousel w-full bg-[#111111] mt-[60px]">
     {#if browser}
-      <Carousel arrows={true} dots={true} swiping={true} bind:this={carousel}>
+      <Carousel arrows={true} dots={true} swiping={true} infinite={false} bind:this={carousel}>
         <div
           id="slide1"
           class="carousel-item relative w-full flex justify-center overflow-hidden"
@@ -140,7 +139,7 @@
           >
             <div class="px-[70px] py-[40px]">
               <img
-                src="/landing-bg.jpeg"
+                src="/astronaut1.jpeg"
                 class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
               />
             </div>
@@ -184,15 +183,9 @@
                 UI/UX experts will work with you to create an intuitive,
                 seamless experience for your users.
               </p>
-              <button class="border w-[180px] h-[50px]"> Get In Touch </button>
+              <a href="mailto:contact@nomadlabs.space"><button class="border w-[180px] h-[50px] contact-btn"> Get In Touch </button></a>
             </div>
           </div>
-          <!-- <div
-            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-          >
-            <a on:click={goToPreviousPage} class="btn btn-circle">❮</a>
-            <a on:click={goToNextPage} class="btn btn-circle">❯</a>
-          </div> -->
         </div>
         <div
           id="slide2"
@@ -202,8 +195,9 @@
             class="flex items-center border w-full gap-[10px] rounded-2xl mx-[30vw]"
           >
             <div class="px-[70px] py-[40px]">
+              <!-- svelte-ignore a11y-missing-attribute -->
               <img
-                src="/landing-bg.jpeg"
+                src="/astronaut2.jpeg"
                 class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
               />
             </div>
@@ -211,7 +205,7 @@
               class="text-white flex flex-col gap-[30px] min-w-[600px] w-full ml-[20px]"
             >
               <div class="flex flex-col gap-[20px]">
-                <h1 class="text-[32px]">UI/UX Design</h1>
+                <h1 class="text-[32px]">Custom Development</h1>
                 <svg
                   width="160"
                   height="13"
@@ -243,19 +237,11 @@
               </div>
 
               <p class="text-[18px] w-[500px] description">
-                A great user experience starts with great design. Our team of
-                UI/UX experts will work with you to create an intuitive,
-                seamless experience for your users.
+                Our team of developers has the skills and experience to tackle any custom development project, from simple applications to complex solutions. We work closely with our clients to ensure that the final product meets their needs and exceeds their expectations.
               </p>
-              <button class="border w-[180px] h-[50px]"> Get In Touch </button>
+              <a href="mailto:contact@nomadlabs.space"><button class="border w-[180px] h-[50px] contact-btn"> Get In Touch </button></a>
             </div>
           </div>
-          <!-- <div
-            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-          >
-            <a on:click={goToPreviousPage} class="btn btn-circle">❮</a>
-            <a on:click={goToNextPage} class="btn btn-circle">❯</a>
-          </div> -->
         </div>
         <div
           id="slide3"
@@ -266,7 +252,7 @@
           >
             <div class="px-[70px] py-[40px]">
               <img
-                src="/landing-bg.jpeg"
+                src="/astronaut3.jpeg"
                 class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
               />
             </div>
@@ -274,7 +260,7 @@
               class="text-white flex flex-col gap-[30px] min-w-[600px] w-full ml-[20px]"
             >
               <div class="flex flex-col gap-[20px]">
-                <h1 class="text-[32px]">UI/UX Design</h1>
+                <h1 class="text-[32px]">Website Design & Development</h1>
                 <svg
                   width="160"
                   height="13"
@@ -306,19 +292,11 @@
               </div>
 
               <p class="text-[18px] w-[500px] description">
-                A great user experience starts with great design. Our team of
-                UI/UX experts will work with you to create an intuitive,
-                seamless experience for your users.
+                A well-designed website can make all the difference. Our team of experts will work with you to create a wensite that not only looks great but is also user-friendly, fast, and optimized for search engines.
               </p>
-              <button class="border w-[180px] h-[50px]"> Get In Touch </button>
+              <a href="mailto:contact@nomadlabs.space"><button class="border w-[180px] h-[50px] contact-btn"> Get In Touch </button></a>
             </div>
           </div>
-          <!-- <div
-            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-          >
-            <a on:click={goToPreviousPage} class="btn btn-circle">❮</a>
-            <a on:click={goToNextPage} class="btn btn-circle">❯</a>
-          </div> -->
         </div>
         <div
           id="slide4"
@@ -329,7 +307,7 @@
           >
             <div class="px-[70px] py-[40px]">
               <img
-                src="/landing-bg.jpeg"
+                src="/astronaut4.jpeg"
                 class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
               />
             </div>
@@ -337,7 +315,7 @@
               class="text-white flex flex-col gap-[30px] min-w-[600px] w-full ml-[20px]"
             >
               <div class="flex flex-col gap-[20px]">
-                <h1 class="text-[32px]">UI/UX Design</h1>
+                <h1 class="text-[32px]">Branding & Identity</h1>
                 <svg
                   width="160"
                   height="13"
@@ -369,19 +347,66 @@
               </div>
 
               <p class="text-[18px] w-[500px] description">
-                A great user experience starts with great design. Our team of
-                UI/UX experts will work with you to create an intuitive,
-                seamless experience for your users.
+                A strong brand is key to standing out in today's crowded marketplace. Our team of branding experts will work with you to create a unique and memorable brand that accurately represents your business.
               </p>
-              <button class="border w-[180px] h-[50px]"> Get In Touch </button>
+              <a href="mailto:contact@nomadlabs.space"><button class="border w-[180px] h-[50px] contact-btn"> Get In Touch </button></a>
             </div>
           </div>
-          <!-- <div
-            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        </div>
+        <div
+          id="slide5"
+          class="carousel-item relative w-full flex justify-center overflow-hidden"
+        >
+          <div
+            class="flex items-center border w-full gap-[10px] rounded-2xl mx-[30vw]"
           >
-            <a on:click={goToPreviousPage} class="btn btn-circle">❮</a>
-            <a on:click={goToNextPage} class="btn btn-circle">❯</a>
-          </div> -->
+            <div class="px-[70px] py-[40px]">
+              <img
+                src="/astronaut5.jpeg"
+                class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
+              />
+            </div>
+            <div
+              class="text-white flex flex-col gap-[30px] min-w-[600px] w-full ml-[20px]"
+            >
+              <div class="flex flex-col gap-[20px]">
+                <h1 class="text-[32px]">Web3 Solutions</h1>
+                <svg
+                  width="160"
+                  height="13"
+                  viewBox="0 0 160 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_21_280)">
+                    <path
+                      d="M160 5.60042V7.88179H31.7627C31.5687 8.55479 31.215 9.02247 30.8043 9.02247C30.3936 9.02247 30.0285 8.5776 29.8346 7.88179H18.2544C18.0833 9.20498 17.6269 10.1632 17.1135 10.1632C16.6001 10.1632 16.1323 9.22779 15.9726 7.88179H5.09982C4.87164 10.6308 3.83342 12.7183 2.57843 12.7183C1.32344 12.7183 0.285218 10.6765 0.0570374 7.92741V5.64605C0.285218 2.85137 1.32344 0.763916 2.57843 0.763916C3.83342 0.763916 4.86023 2.85137 5.09982 5.60042H15.9726C16.1437 4.27722 16.6001 3.31905 17.1135 3.31905C17.6269 3.31905 18.0947 4.25441 18.2544 5.60042H29.8346C30.0285 4.92741 30.3936 4.45973 30.8043 4.45973C31.215 4.45973 31.5687 4.9046 31.7627 5.60042H160Z"
+                      fill="#666666"
+                    />
+                    <path
+                      d="M0.0576749 5.60046V7.88183C0.0344453 7.50193 0.0344453 7.12105 0.0576749 6.74115C0.0344453 6.36125 0.0344453 5.98036 0.0576749 5.60046Z"
+                      fill="#666666"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_21_280">
+                      <rect
+                        width="160"
+                        height="12"
+                        fill="white"
+                        transform="translate(0 0.763916)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+
+              <p class="text-[18px] w-[500px] description">
+                Web3 is the future, and we're leading the way. From decentralized applications to blockchain solutions, we have the expertise to help you explore this exciting new frontier.
+              </p>
+              <a href="mailto:contact@nomadlabs.space"><button class="border w-[180px] h-[50px] contact-btn"> Get In Touch </button></a>
+            </div>
+          </div>
         </div>
       </Carousel>
     {/if}
@@ -390,12 +415,16 @@
 </div>
 
 <style>
-  /* .carousel {
-    overflow-x: scroll !important;
-  } */
-
   .description {
     font-family: "Open Sans", sans-serif;
     text-align: justify;
+  }
+
+  .contact-btn {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .contact-btn:hover {
+    border-color: #BBBBBB;
   }
 </style>

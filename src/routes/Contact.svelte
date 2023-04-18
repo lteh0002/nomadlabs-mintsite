@@ -36,11 +36,13 @@
     </p>
   </div>
 
-  <div
-    class="border text-white h-[50px] w-[180px] flex justify-center items-center mt-[40px]"
+  <a href="mailto:contact@nomadlabs.space">
+    <div
+    class="border text-white h-[50px] w-[180px] flex justify-center items-center mt-[40px] button-hover"
   >
     Get In Touch
   </div>
+  </a>
 </div>
 
 <style>
@@ -62,5 +64,13 @@
 
   .description {
     font-family: "Open Sans", sans-serif;
+  }
+
+  .button-hover {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .button-hover:hover {
+    border-color: #BBBBBB;
   }
 </style>

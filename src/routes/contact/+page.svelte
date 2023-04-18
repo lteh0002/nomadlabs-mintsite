@@ -37,7 +37,8 @@
         Let us help you bring your digital vision to life
       </p>
       <ul>
-        <li class="text-[18px]">hello@nomadlabs.space</li>
+       
+          <li class="text-[18px]"> <a href="mailto:contact@nomadlabs.space">contact@nomadlabs.space</a></li>
       </ul>
     </div>
   </div>

@@ -1,14 +1,13 @@
 <script>
   import NormalHeader from "../NormalHeader.svelte";
   import { navigation } from "./../../utils/nav.js";
+  
   navigation.reset();
   navigation.mint();
 </script>
 
 <NormalHeader />
-<div
-  class="flex min-h-screen justify-between items-center bg-[#111111] min-w-[100vw]"
->
+<div class="flex min-h-screen items-center bg-[#111111] min-w-[100vw]">
   <div class="flex justify-center min-w-[50%] h-full w-full">
     <div class="flex flex-col gap-[20px] text-white">
       <h1 class="text-[48px]">Mint</h1>
@@ -35,13 +34,12 @@
           </clipPath>
         </defs>
       </svg>
-      <p class="text-[18px]">Coming Soon</p>
-      <!-- <ul>
-        <li class="text-[18px]">hello@nomadlabs.space</li>
-      </ul> -->
+      <p class="text-[18px]">
+        Coming Soon
+      </p>
     </div>
   </div>
-  <div class="flex min-w-[50%]">
-    <img src="/floatingspaceman.jpeg" class="min-w-[full] min-h-full w-[740px] h-[740px]" alt="" />
+  <div class="flex justify-center">
+    <img src="/floatingspaceman.jpeg" class="min-w-[50%] min-h-full" alt="" />
   </div>
 </div>

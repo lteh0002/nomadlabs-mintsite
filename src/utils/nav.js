@@ -9,6 +9,7 @@ function setNav() {
     service: () => set('service'),
     mint: () => set('mint'),
     contact: () => set('contact'),
+    about: () => set('about'),
     reset: () => set(null)
   }
 }
