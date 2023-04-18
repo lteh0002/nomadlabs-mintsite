@@ -121,7 +121,7 @@
       <svg width="2" height="30" viewBox="0 0 2 30" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 0L0.999999 15L0.999999 30" stroke="#BBBBBB" stroke-width="1.5"/>
       </svg>
-      <p class="socials">Discord</p>  
+      <p class="socials">OpenSea</p>  
     </div>
     <div class="flex justify-center gap-[20px] items-center border min-w-[180px] min-h-[50px] h-[50px]">
       <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,7 +141,7 @@
       <svg width="2" height="30" viewBox="0 0 2 30" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 0L0.999999 15L0.999999 30" stroke="#BBBBBB" stroke-width="1.5"/>
       </svg>
-      <p class="socials">Discord</p>  
+      <p class="socials">MetaMask</p>  
     </div>
   </div>
 
