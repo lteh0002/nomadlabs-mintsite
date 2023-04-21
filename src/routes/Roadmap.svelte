@@ -41,5 +41,6 @@
 <style>
   * {
     color: white;
+    background-color: #111111;
   }
 </style>

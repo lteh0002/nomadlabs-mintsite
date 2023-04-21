@@ -32,22 +32,8 @@
 
 <style>
   * {
-    background-color: black;
+    background-color: #111111;
     color: white;
-  }
-
-  .description {
-    font-family: "Open Sans", sans-serif;
-    padding-top: 30px;
-    text-align: justify;
-  }
-
-  .description-about-us {
-    font-size: 14px;
-    font-family: "Open Sans", sans-serif;
-    padding-top: 10px;
-    text-align: justify;
-    max-width: 190px;
   }
 
   .genesis-description {
@@ -57,9 +43,5 @@
   .asset-title {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
-  }
-
-  .border-round {
-    border-radius: 25px;
   }
 </style>
