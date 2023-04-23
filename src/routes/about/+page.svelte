@@ -52,7 +52,7 @@
     <div class="flex flex-col item gap-[150px]">
       <div class="flex lg:flex-row flex-col lg:gap-[110px] justify-center items-center">
         <img class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px]" src="/ufo.jpeg" alt="" />
-        <div class="flex flex-col mt-[50px] lg:justify-center] w-full">
+        <div class="flex flex-col mt-[50px] lg:justify-center w-full sm:min-w-[510px]">
           <h1 class="text-white sm:text-[48px] text-[30px] mb-[30px]">Welcome to Nomad Labs</h1>
           <svg
             width="160"
@@ -140,7 +140,7 @@
             />
           </svg>
           <div class="sm:mt-[65px] mt-[30px]">
-            <div class="lg:flex lg:gap-[70px] grid sm:grid-cols-2 grid-rows-4 grid-cols-1 mb-[150px] sm:gap-[60px] gap-[30px]">
+            <div class="lg:flex lg:gap-[70px] grid sm:grid-cols-2 sm:grid-rows-2 grid-rows-4 grid-cols-1 mb-[150px] sm:gap-[60px] gap-[30px]">
               <div
                 class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] border-round px-[25px] lg:mb-[40px]"
               >
