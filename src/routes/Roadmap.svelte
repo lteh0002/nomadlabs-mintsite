@@ -28,7 +28,7 @@
         class="flex lg:flex-row flex-col lg:gap-[110px] justify-center min-h-[650px]"
       >
         <img
-          class="lg:w-[600px] lg:h-[600px] sm:min-h-[400px] sm:min-w-[620px] min-h-[450px] max-w-[350px] rounded-[50px]"
+          class="lg:w-[600px] lg:h-[600px] sm:h-[400px] sm:min-w-[620px] min-h-[450px] min--w-[350px] rounded-[50px]"
           src="/nomadspeech.png"
           alt=""
         />
@@ -37,7 +37,8 @@
             Roadmap
           </h1>
           <svg
-            class="sm:w-[261px] sm:h-[12px] w-[112px] h-[12px]"
+            width="261"
+            height="12"
             viewBox="0 0 261 12"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +65,7 @@
             </defs>
           </svg>
 
-          <div class="lg:mt-[15px] mt-[20px] sm:text-[18px] text-[14px] whitespace-normal w-[350px] sm:w-full">
+          <div class="lg:mt-[15px] mt-[20px] sm:text-[18px] text-[14px] whitespace-normal">
             {#each Object.entries(data) as entry}
               <Item {entry} />
             {/each}

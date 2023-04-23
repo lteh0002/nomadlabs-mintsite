@@ -1,8 +1,8 @@
 <div class="bg-[#111111] min-w-[100vw] min-h-[600px] pt-[150px] pb-[150px]">
-  <div class="lg:px-[350px] sm:px-[100px]">
+  <div class="lg:px-[350px] sm:px-[100px] px-[20px]">
     <div class="flex flex-col item gap-[150px]">
       <div class="flex lg:flex-row flex-col lg:gap-[110px] justify-center items-center container">
-        <div class="flex flex-col lg:justify-center min-w-[500px] first_div mt-[50px] lg:mt-[0px] px-[20px]">
+        <div class="flex flex-col lg:justify-center min-w-[500px] first_div mt-[50px] lg:mt-[0px]">
           <h1 class="text-white sm:text-[48px] text-[30px] mb-[20px]">Utility</h1>
           <svg class="sm:w-[261px] sm:h-[12px] w-[112px] h-[12px]" viewBox="0 0 261 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_166_71)">
@@ -44,9 +44,11 @@
             </div>
 
         </div>
-        <div class="second_div flex justify-center w-full">
-          <img class="lg:min-w-[600px] lg:h-[600px] sm:min-h-[400px] sm:min-w-[620px] max-w-[350px] min-h-[400px] rounded-[50px]" src="/walkietalkie.png" alt="" />
-        </div>
+        <img
+          class="lg:w-[600px] lg:h-[600px] sm:h-[400px] sm:min-w-[620px] min-h-[450px] rounded-[50px]"
+          src="/walkietalkie.png"
+          alt=""
+        />
       </div>
     </div>
   </div>
