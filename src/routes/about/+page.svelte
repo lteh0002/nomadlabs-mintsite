@@ -95,10 +95,10 @@
       </div>
 
       <div
-        class="flex flex-col lg:flex-row lg:gap-[110px] items-center justify-center wedo-container"
+        class="flex flex-col lg:flex-row lg:gap-[110px] sm:items-center justify-center wedo-container"
       >
         <div
-          class="flex flex-col justify-center min-w-[510px] wedo-desc"
+          class="flex flex-col min-w-[510px] wedo-desc"
         >
           <h1
             class="text-white sm:text-[48px] text-[30px] mb-[30px] mt-[50px] lg:mt-[0px]"
