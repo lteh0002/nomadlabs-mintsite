@@ -56,7 +56,7 @@
 <div on:click={closeOverlay} id="overlay" />
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <nav class='{isNavOpen ? "open" : ""} relative'>
-  <div class="absolute top-[30px] right-[70px] inline">
+  <div class="absolute top-[30px] sm:right-[70px] right-[30px] inline">
     <div
     id="sidebar"
     on:click={toggleNav}
