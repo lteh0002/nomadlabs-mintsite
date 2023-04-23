@@ -13,7 +13,7 @@
   function goToPreviousPage() {
     carousel.goToPrev();
   }
-  
+
   import NormalHeader from "../NormalHeader.svelte";
   import Contact from "../Contact.svelte";
   onMount(async () => {
@@ -27,28 +27,28 @@
     indicatorActive[0].classList.add("indicator-size");
     btnContainer[0].classList.add("testing");
 
-    const test = Array.from(document.getElementsByClassName('sc-carousel__pages-window'))
-    const indicator = document.getElementsByClassName('sc-carousel-dot__dot')
-    const pagesContainer = document.getElementsByClassName('sc-carousel__pages-container')
+    // const test = Array.from(document.getElementsByClassName('sc-carousel__pages-window'))
+    // const indicator = document.getElementsByClassName('sc-carousel-dot__dot')
+    // const pagesContainer = document.getElementsByClassName('sc-carousel__pages-container')
     // console.log(pagesContainer[0])
-    test[0].addEventListener('scroll', function() {
-      let scrollLeft = test[0].scrollLeft;
-      console.log('Horizontal scroll position:', scrollLeft);
-      let slideWidth = pagesContainer[0].offsetWidth
-      // console.log(pagesContainer[0].offsetWidth)
-      if (scrollLeft <= slideWidth/2 && scrollLeft > 0) {
-        indicator[0].classList.add('sc-carousel-dot__dot_active')
-        indicator[1].classList.remove('sc-carousel-dot__dot_active')
-        pagesContainer[0].style.transform = `translateX(` + (slideWidth - scrollLeft) + 'px)';
-        pagesContainer[0].style.transitionDuration = '500ms';
-        scrollLeft = 0
-      } else if (scrollLeft >= slideWidth/2) {
-        indicator[0].classList.remove('sc-carousel-dot__dot_active')
-        indicator[1].classList.add('sc-carousel-dot__dot_active')
-        pagesContainer[0].style.transform = `translateX(` + (slideWidth*-1 + scrollLeft) + 'px)'
-        pagesContainer[0].style.transitionDuration = '500ms';
-      }
-    });
+    // test[0].addEventListener('scroll', function() {
+    //   let scrollLeft = test[0].scrollLeft;
+    //   console.log('Horizontal scroll position:', scrollLeft);
+    //   let slideWidth = pagesContainer[0].offsetWidth
+    //   // console.log(pagesContainer[0].offsetWidth)
+    //   if (scrollLeft <= slideWidth/2 && scrollLeft > 0) {
+    //     indicator[0].classList.add('sc-carousel-dot__dot_active')
+    //     indicator[1].classList.remove('sc-carousel-dot__dot_active')
+    //     pagesContainer[0].style.transform = `translateX(` + (slideWidth - scrollLeft) + 'px)';
+    //     pagesContainer[0].style.transitionDuration = '500ms';
+    //     scrollLeft = 0
+    //   } else if (scrollLeft >= slideWidth/2) {
+    //     indicator[0].classList.remove('sc-carousel-dot__dot_active')
+    //     indicator[1].classList.add('sc-carousel-dot__dot_active')
+    //     pagesContainer[0].style.transform = `translateX(` + (slideWidth*-1 + scrollLeft) + 'px)'
+    //     pagesContainer[0].style.transitionDuration = '500ms';
+    //   }
+    // });
   });
 
   navigation.reset();
@@ -58,46 +58,50 @@
 <NormalHeader />
 <div class="bg-[#111111] min-w-[100vw]">
   <div
-    class="flex flex-1 justify-between items-center bg-[#111111] min-w-[100vw] max-h-screen"
+    class="flex flex-col lg:flex-row lg:justify-between lg:items-center bg-[#111111] min-w-[100vw] min-h-screen landing-container"
   >
-    <div class="flex justify-center min-w-[50%] h-full w-full">
-      <div class="flex flex-col gap-[20px] text-white">
-        <h1 class="text-[48px]">Services</h1>
-        <svg
-          width="160"
-          height="12"
-          viewBox="0 0 160 12"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g clip-path="url(#clip0_21_234)">
-            <path
-              d="M160 4.8365V7.11787H31.7627C31.5687 7.79087 31.215 8.25855 30.8043 8.25855C30.3936 8.25855 30.0285 7.81369 29.8345 7.11787H18.2544C18.0832 8.44106 17.6269 9.39924 17.1135 9.39924C16.6001 9.39924 16.1323 8.46388 15.9726 7.11787H5.09979C4.87161 9.86692 3.83339 11.9544 2.5784 11.9544C1.32341 11.9544 0.285187 9.91255 0.0570068 7.1635V4.88213C0.285187 2.08745 1.32341 0 2.5784 0C3.83339 0 4.8602 2.08745 5.09979 4.8365H15.9726C16.1437 3.51331 16.6001 2.55513 17.1135 2.55513C17.6269 2.55513 18.0947 3.49049 18.2544 4.8365H29.8345C30.0285 4.1635 30.3936 3.69582 30.8043 3.69582C31.215 3.69582 31.5687 4.14068 31.7627 4.8365H160Z"
-              fill="#666666"
-            />
-            <path
-              d="M0.0577054 4.8365V7.11787C0.0344758 6.73797 0.0344758 6.35709 0.0577054 5.97719C0.0344758 5.59729 0.0344758 5.2164 0.0577054 4.8365Z"
-              fill="#666666"
-            />
-          </g>
-          <defs>
-            <clipPath id="clip0_21_234">
-              <rect width="160" height="12" fill="white" />
-            </clipPath>
-          </defs>
-        </svg>
-        <ul class="list-disc list-inside">
-          <li class="text-[18px]">UI/UX Design</li>
-          <li class="text-[18px]">Web3 Solutions</li>
-          <li class="text-[18px]">Branding & Identity</li>
-          <li class="text-[18px]">Custom Development</li>
-          <li class="text-[18px]">Website Design & Development</li>
-          <li class="text-[18px]">Launchpad (Coming Soon)</li>
-        </ul>
+    <div
+      class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title px-[100px] flex-1 justify-center"
+    >
+      <div>
+        <div class="flex flex-col gap-[20px] text-white">
+          <h1 class="text-[48px]">Services</h1>
+          <svg
+            width="160"
+            height="12"
+            viewBox="0 0 160 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_21_234)">
+              <path
+                d="M160 4.8365V7.11787H31.7627C31.5687 7.79087 31.215 8.25855 30.8043 8.25855C30.3936 8.25855 30.0285 7.81369 29.8345 7.11787H18.2544C18.0832 8.44106 17.6269 9.39924 17.1135 9.39924C16.6001 9.39924 16.1323 8.46388 15.9726 7.11787H5.09979C4.87161 9.86692 3.83339 11.9544 2.5784 11.9544C1.32341 11.9544 0.285187 9.91255 0.0570068 7.1635V4.88213C0.285187 2.08745 1.32341 0 2.5784 0C3.83339 0 4.8602 2.08745 5.09979 4.8365H15.9726C16.1437 3.51331 16.6001 2.55513 17.1135 2.55513C17.6269 2.55513 18.0947 3.49049 18.2544 4.8365H29.8345C30.0285 4.1635 30.3936 3.69582 30.8043 3.69582C31.215 3.69582 31.5687 4.14068 31.7627 4.8365H160Z"
+                fill="#666666"
+              />
+              <path
+                d="M0.0577054 4.8365V7.11787C0.0344758 6.73797 0.0344758 6.35709 0.0577054 5.97719C0.0344758 5.59729 0.0344758 5.2164 0.0577054 4.8365Z"
+                fill="#666666"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_21_234">
+                <rect width="160" height="12" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <ul class="list-disc list-inside flex flex-col gap-[10px]">
+            <li class="text-[18px]">UI/UX Design</li>
+            <li class="text-[18px]">Web3 Solutions</li>
+            <li class="text-[18px]">Branding & Identity</li>
+            <li class="text-[18px]">Custom Development</li>
+            <li class="text-[18px]">Website Design & Development</li>
+            <li class="text-[18px]">Launchpad (Coming Soon)</li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="flex min-w-[50%]">
-      <img src="/floatingspaceman.jpeg" class="min-w-full min-h-full" alt="" />
+    <div class="flex min-w-[50%] mt-[100px] lg:mt-[0px] landing-img">
+      <img src="/staring.jpeg" class="min-w-full lg:min-w-[50%]" alt="" />
     </div>
   </div>
   <div class="flex flex-col items-center gap-[20px] pt-[100px]">
@@ -127,27 +131,35 @@
       </defs>
     </svg>
   </div>
-  <div class="carousel w-full bg-[#111111] mt-[60px]">
+  <div class="carousel w-full flex items-center bg-[#111111] mt-[60px]">
     {#if browser}
-      <Carousel arrows={true} dots={true} swiping={true} infinite={false} bind:this={carousel}>
-        <div
-          id="slide1"
-          class="carousel-item relative w-full flex justify-center overflow-hidden"
-        >
+      <Carousel
+        arrows={true}
+        dots={true}
+        swiping={true}
+        infinite={false}
+        bind:this={carousel}
+      >
+        <div id="slide1" class="carousel-item relative w-full h-full">
           <div
-            class="flex items-center border w-full gap-[10px] rounded-2xl mx-[30vw]"
+            class="flex flex-col sm:flex-row justify-around items-center border w-full lg:gap-[10px] rounded-2xl"
           >
-            <div class="px-[70px] py-[40px]">
+            <div
+              class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
+            >
               <img
                 src="/astronaut1.jpeg"
-                class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
+                class="w-full lg:max-w-[500px] h-auto rounded-3xl"
+                alt="astronaut"
               />
             </div>
-            <div
-              class="text-white flex flex-col gap-[30px] min-w-[600px] w-full ml-[20px]"
-            >
-              <div class="flex flex-col gap-[20px]">
-                <h1 class="text-[32px]">UI/UX Design</h1>
+            <div class="w-full lg:w-[50%]">
+              <div
+                class="text-white flex flex-col gap-[15px] px-[40px] lg:pr-[60px] mb-[20px]"
+              >
+                <h1 class="lg:text-[32px] sm:text-[28px] text-[24px]">
+                  UI/UX Design
+                </h1>
                 <svg
                   width="160"
                   height="13"
@@ -176,36 +188,44 @@
                     </clipPath>
                   </defs>
                 </svg>
+                <p
+                  class="lg:text-[18px] text-[12px] min-h-[54px] description"
+                >
+                  A great user experience starts with great design. Our team of
+                  UI/UX experts will work with you to create an intuitive,
+                  seamless experience for your users.
+                </p>
+                <a href="mailto:contact@nomadlabs.space"
+                  ><button
+                    class="border sm:w-full lg:w-[180px] w-[160px] h-[50px] contact-btn"
+                  >
+                    Get In Touch
+                  </button></a
+                >
               </div>
-
-              <p class="text-[18px] w-[500px] description">
-                A great user experience starts with great design. Our team of
-                UI/UX experts will work with you to create an intuitive,
-                seamless experience for your users.
-              </p>
-              <a href="mailto:contact@nomadlabs.space"><button class="border w-[180px] h-[50px] contact-btn"> Get In Touch </button></a>
             </div>
           </div>
         </div>
-        <div
-          id="slide2"
-          class="carousel-item relative w-full flex justify-center overflow-hidden"
-        >
+        <div id="slide4" class="carousel-item relative w-full h-full">
           <div
-            class="flex items-center border w-full gap-[10px] rounded-2xl mx-[30vw]"
+            class="flex flex-col sm:flex-row justify-around items-center border w-full lg:gap-[10px] rounded-2xl"
           >
-            <div class="px-[70px] py-[40px]">
-              <!-- svelte-ignore a11y-missing-attribute -->
+            <div
+              class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
+            >
               <img
                 src="/astronaut2.jpeg"
-                class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
+                class="w-full lg:max-w-[500px] h-auto rounded-3xl"
+                alt="astronaut"
               />
             </div>
-            <div
-              class="text-white flex flex-col gap-[30px] min-w-[600px] w-full ml-[20px]"
-            >
-              <div class="flex flex-col gap-[20px]">
-                <h1 class="text-[32px]">Custom Development</h1>
+            <div class="w-full lg:w-[50%]">
+              <div
+                class="text-white flex flex-col gap-[15px] px-[40px] lg:pr-[60px] mb-[20px]"
+              >
+                <h1 class="lg:text-[32px] sm:text-[28px] text-[24px]">
+                  Custom Development
+                </h1>
                 <svg
                   width="160"
                   height="13"
@@ -234,33 +254,44 @@
                     </clipPath>
                   </defs>
                 </svg>
+                <p class="lg:text-[18px] text-[12px] description">
+                  Our team of developers has the skills and experience to tackle
+                  any custom development project, from simple applications to
+                  complex solutions. We work closely with our clients to ensure
+                  that the final product meets their needs and exceeds their
+                  expectations.
+                </p>
+                <a href="mailto:contact@nomadlabs.space"
+                  ><button
+                    class="border sm:w-full lg:w-[180px] w-[160px] h-[50px] contact-btn"
+                  >
+                    Get In Touch
+                  </button></a
+                >
               </div>
-
-              <p class="text-[18px] w-[500px] description">
-                Our team of developers has the skills and experience to tackle any custom development project, from simple applications to complex solutions. We work closely with our clients to ensure that the final product meets their needs and exceeds their expectations.
-              </p>
-              <a href="mailto:contact@nomadlabs.space"><button class="border w-[180px] h-[50px] contact-btn"> Get In Touch </button></a>
             </div>
           </div>
         </div>
-        <div
-          id="slide3"
-          class="carousel-item relative w-full flex justify-center overflow-hidden"
-        >
+        <div id="slide3" class="carousel-item relative w-full h-full">
           <div
-            class="flex items-center border w-full gap-[10px] rounded-2xl mx-[30vw]"
+            class="flex flex-col sm:flex-row justify-around items-center border w-full lg:gap-[10px] rounded-2xl"
           >
-            <div class="px-[70px] py-[40px]">
+            <div
+              class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
+            >
               <img
                 src="/astronaut3.jpeg"
-                class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
+                class="w-full lg:max-w-[500px] h-auto rounded-3xl"
+                alt="astronaut"
               />
             </div>
-            <div
-              class="text-white flex flex-col gap-[30px] min-w-[600px] w-full ml-[20px]"
-            >
-              <div class="flex flex-col gap-[20px]">
-                <h1 class="text-[32px]">Website Design & Development</h1>
+            <div class="w-full lg:w-[50%]">
+              <div
+                class="text-white flex flex-col gap-[15px] px-[40px] lg:pr-[60px] mb-[20px]"
+              >
+                <h1 class="lg:text-[32px] sm:text-[28px] text-[24px]">
+                  Website Design & Development
+                </h1>
                 <svg
                   width="160"
                   height="13"
@@ -289,33 +320,43 @@
                     </clipPath>
                   </defs>
                 </svg>
+                <p class="lg:text-[18px] text-[12px] description">
+                  A well-designed website can make all the difference. Our team
+                  of experts will work with you to create a website that not
+                  only looks great but is also user-friendly, fast, and
+                  optimized for search engines.
+                </p>
+                <a href="mailto:contact@nomadlabs.space"
+                  ><button
+                    class="border sm:w-full lg:w-[180px] w-[160px] h-[50px] contact-btn"
+                  >
+                    Get In Touch
+                  </button></a
+                >
               </div>
-
-              <p class="text-[18px] w-[500px] description">
-                A well-designed website can make all the difference. Our team of experts will work with you to create a wensite that not only looks great but is also user-friendly, fast, and optimized for search engines.
-              </p>
-              <a href="mailto:contact@nomadlabs.space"><button class="border w-[180px] h-[50px] contact-btn"> Get In Touch </button></a>
             </div>
           </div>
         </div>
-        <div
-          id="slide4"
-          class="carousel-item relative w-full flex justify-center overflow-hidden"
-        >
+        <div id="slide4" class="carousel-item relative w-full h-full">
           <div
-            class="flex items-center border w-full gap-[10px] rounded-2xl mx-[30vw]"
+            class="flex flex-col sm:flex-row justify-around items-center border w-full lg:gap-[10px] rounded-2xl"
           >
-            <div class="px-[70px] py-[40px]">
+            <div
+              class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
+            >
               <img
                 src="/astronaut4.jpeg"
-                class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
+                class="w-full lg:max-w-[500px] h-auto rounded-3xl"
+                alt="astronaut"
               />
             </div>
-            <div
-              class="text-white flex flex-col gap-[30px] min-w-[600px] w-full ml-[20px]"
-            >
-              <div class="flex flex-col gap-[20px]">
-                <h1 class="text-[32px]">Branding & Identity</h1>
+            <div class="w-full lg:w-[50%]">
+              <div
+                class="text-white flex flex-col gap-[15px] px-[40px] lg:pr-[60px] mb-[20px]"
+              >
+                <h1 class="lg:text-[32px] sm:text-[28px] text-[24px]">
+                  Custom Development
+                </h1>
                 <svg
                   width="160"
                   height="13"
@@ -344,33 +385,44 @@
                     </clipPath>
                   </defs>
                 </svg>
+                <p class="lg:text-[18px] text-[12px] description">
+                  Our team of developers has the skills and experience to tackle
+                  any custom development project, from simple applications to
+                  complex solutions. We work closely with our clients to ensure
+                  that the final product meets their needs and exceeds their
+                  expectations.
+                </p>
+                <a href="mailto:contact@nomadlabs.space"
+                  ><button
+                    class="border sm:w-full lg:w-[180px] w-[160px] h-[50px] contact-btn"
+                  >
+                    Get In Touch
+                  </button></a
+                >
               </div>
-
-              <p class="text-[18px] w-[500px] description">
-                A strong brand is key to standing out in today's crowded marketplace. Our team of branding experts will work with you to create a unique and memorable brand that accurately represents your business.
-              </p>
-              <a href="mailto:contact@nomadlabs.space"><button class="border w-[180px] h-[50px] contact-btn"> Get In Touch </button></a>
             </div>
           </div>
         </div>
-        <div
-          id="slide5"
-          class="carousel-item relative w-full flex justify-center overflow-hidden"
-        >
+        <div id="slide5" class="carousel-item relative w-full h-full">
           <div
-            class="flex items-center border w-full gap-[10px] rounded-2xl mx-[30vw]"
+            class="flex flex-col sm:flex-row justify-around items-center border w-full lg:gap-[10px] rounded-2xl"
           >
-            <div class="px-[70px] py-[40px]">
+            <div
+              class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
+            >
               <img
                 src="/astronaut5.jpeg"
-                class="max-w-[500px] max-h-[500px] w-[500px] h-[500px] rounded-3xl"
+                class="w-full lg:max-w-[500px] h-auto rounded-3xl"
+                alt="astronaut"
               />
             </div>
-            <div
-              class="text-white flex flex-col gap-[30px] min-w-[600px] w-full ml-[20px]"
-            >
-              <div class="flex flex-col gap-[20px]">
-                <h1 class="text-[32px]">Web3 Solutions</h1>
+            <div class="w-full lg:w-[50%]">
+              <div
+                class="text-white flex flex-col gap-[15px] px-[40px] lg:pr-[60px] mb-[20px]"
+              >
+                <h1 class="lg:text-[32px] sm:text-[28px] text-[24px]">
+                  Web3 Solutions
+                </h1>
                 <svg
                   width="160"
                   height="13"
@@ -399,12 +451,20 @@
                     </clipPath>
                   </defs>
                 </svg>
+                <p class="lg:text-[18px] text-[12px] description">
+                  A strong brand is key to standing out in today's crowded
+                  marketplace. Our team of branding experts will work with you
+                  to create a unique and memorable brand that accurately
+                  represents your business.
+                </p>
+                <a href="mailto:contact@nomadlabs.space"
+                  ><button
+                    class="border sm:w-full lg:w-[180px] w-[160px] h-[50px] contact-btn"
+                  >
+                    Get In Touch
+                  </button></a
+                >
               </div>
-
-              <p class="text-[18px] w-[500px] description">
-                Web3 is the future, and we're leading the way. From decentralized applications to blockchain solutions, we have the expertise to help you explore this exciting new frontier.
-              </p>
-              <a href="mailto:contact@nomadlabs.space"><button class="border w-[180px] h-[50px] contact-btn"> Get In Touch </button></a>
             </div>
           </div>
         </div>
@@ -415,6 +475,11 @@
 </div>
 
 <style>
+  .carousel-item {
+    position: relative;
+    overflow: hidden;
+  }
+
   .description {
     font-family: "Open Sans", sans-serif;
     text-align: justify;
@@ -425,6 +490,62 @@
   }
 
   .contact-btn:hover {
-    border-color: #BBBBBB;
+    border-color: #bbbbbb;
+  }
+
+  .landing-container {
+    max-width: 100vw;
+  }
+
+  .landing-img {
+    min-width: 100%;
+    max-height: 100vh;
+  }
+
+  .landing-img img {
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+  }
+
+  @media (max-width: 1024px) {
+    .landing-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      /* optional */
+      -webkit-box-align: start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
+      -webkit-align-items: flex-start;
+      align-items: flex-start;
+    }
+
+    .landing-title {
+      -webkit-box-ordinal-group: 2;
+      -moz-box-ordinal-group: 2;
+      -ms-flex-order: 2;
+      -webkit-order: 2;
+      order: 2;
+    }
+
+    .landing-img {
+      -webkit-box-ordinal-group: 1;
+      -moz-box-ordinal-group: 1;
+      -ms-flex-order: 1;
+      -webkit-order: 1;
+      order: 1;
+    }
+
+    .landing-img {
+      max-height: 50vh;
+    }
   }
 </style>

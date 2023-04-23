@@ -42,7 +42,7 @@
           </defs>
         </svg>
 
-        <h1 id="scroll-prompt" class="text-white">SCROLL DOWN</h1>
+        <h1 id="scroll-prompt" class="text-white text-[24px]">Explore the Genesis Collection</h1>
       </div>
     </div>
     <GenesisCollection />

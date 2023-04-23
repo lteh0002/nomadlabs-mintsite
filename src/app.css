@@ -58,7 +58,7 @@ html, body {
 }
 
 .sc-carousel-arrow__circle {
-  margin: 0 30px !important;
+  margin: 0px 5px !important;
   background-color: #111111 !important;
   font-size: 10px !important;
 }
@@ -67,8 +67,6 @@ html, body {
   outline: none !important;
 }
 
-@media only screen and (max-width: 900px) {
-  .sc-carousel__pages-window.svelte-uwo0yk {
-    overflow: scroll !important;
-  }
+.sc-carousel__pages-container {
+  align-items: center;
 }

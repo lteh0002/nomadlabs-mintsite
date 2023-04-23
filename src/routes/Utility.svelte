@@ -1,8 +1,8 @@
 <div class="bg-[#111111] min-w-[100vw] min-h-[600px] pt-[150px] pb-[150px]">
   <div class="lg:px-[350px] px-[100px]">
     <div class="flex flex-col item gap-[150px]">
-      <div class="flex lg:flex-row flex-col lg:gap-[110px] justify-center items-center">
-        <div class="flex flex-col lg:justify-center min-w-[500px]">
+      <div class="flex lg:flex-row flex-col lg:gap-[110px] justify-center items-center container">
+        <div class="flex flex-col lg:justify-center min-w-[500px] first_div mt-[50px] lg:mt-[0px]">
           <h1 class="text-white text-[48px] mb-[20px]">Utility</h1>
           <svg width="261" height="12" viewBox="0 0 261 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_166_71)">
@@ -44,7 +44,9 @@
             </div>
 
         </div>
-        <img class="lg:min-w-[600px] lg:h-[600px] h-[400px] w-[620px] rounded-[50px]" src="/walkietalkie.png" alt="" />
+        <div class="second_div">
+          <img class="lg:min-w-[600px] lg:h-[600px] h-[400px] w-[620px] rounded-[50px]" src="/walkietalkie.png" alt="" />
+        </div>
       </div>
     </div>
   </div>
@@ -59,5 +61,42 @@
   .utility-desc {
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      /* optional */
+      -webkit-box-align: start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
+      -webkit-align-items: flex-start;
+      align-items: flex-start;
+    }
+
+    .container .first_div {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+  }
+
+  .container .second_div {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+  }
   }
 </style>

@@ -12,7 +12,7 @@
         </clipPath>
         </defs>
       </svg>
-      <div class="mt-[40px] flex flex-col gap-[40px] max-w-[800px] w-[800px]">
+      <div class="mt-[40px] flex flex-col gap-[40px] lg:max-w-[800px] lg:w-[800px] max-w-[620px]">
         <p class="text-center text-[18px] genesis-description">Nomad Labs is a utility-based project that caters to the workforce of Web3, including project founders, developers, collab managers, artists, and more.</p>
         <p class="text-center text-[18px] genesis-description">Our goal is to act as a pillar within the space and bridge Web2 and Web3 by bringing mass commercial adoption that much sooner.</p>
         <p class="text-center text-[18px] genesis-description">We aim to be a one-stop-shop for all your Web3 needs, while also establishing a strong brand that allows us to deliver to the Web3 consumer.</p>
@@ -20,10 +20,10 @@
 
       <div class="mt-[40px] flex flex-col items-center">
         <h1 class="asset-title text-[18px]">Discover the Genesis Collection</h1>
-        <div class="grid grid-cols-3 gap-[80px] mt-[45px] min-w-[1210px]">
-          <img class="min-w-[350px] min-h-[450px]" src="/nft3.jpeg" alt="">
-          <img class="min-w-[350px] min-h-[450px]" src="/nft3.jpeg" alt="">
-          <img class="min-w-[350px] min-h-[450px]" src="/nft3.jpeg" alt="">
+        <div class="lg:grid lg:grid-cols-3 lg:gap-[80px] lg:min-w-[1210px] mt-[45px] flex flex-col justify-center gap-[40px]">
+          <img class="max-w-[350px] max-h-[450px]" src="/nft3.jpeg" alt="">
+          <img class="max-w-[350px] max-h-[450px]" src="/nft3.jpeg" alt="">
+          <img class="max-w-[350px] max-h-[450px]" src="/nft3.jpeg" alt="">
         </div>
       </div>
     </div>

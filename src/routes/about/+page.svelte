@@ -9,10 +9,11 @@
 <NormalHeader />
 <div class="bg-[#111111] min-w-[100vw]">
   <div
-    class="flex flex-1 justify-between items-center bg-[#111111] min-w-[100vw] min-h-screen"
+    class="flex flex-col lg:flex-row lg:justify-between lg:items-center bg-[#111111] min-w-[100vw] min-h-screen landing-container"
   >
-    <div class="flex justify-center min-w-[50%] h-full w-full">
-      <div class="flex flex-col gap-[20px] text-white">
+  <div class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title px-[100px] flex-1 justify-center">
+    <div>
+      <div class="flex flex-1 flex-col justify-center text-white gap-[10px] lg:min-h-[50%]">
         <h1 class="text-[48px]">About Us</h1>
         <svg
           width="160"
@@ -37,17 +38,20 @@
             </clipPath>
           </defs>
         </svg>
-        <h1 class="title-description">Navigate the Web3 Universe with us</h1>
+        <p class="text-[18px]">
+          Let us help you bring your digital vision to life
+        </p>
       </div>
     </div>
-    <div class="flex min-w-[50%]">
-      <img src="/spaceship.jpeg" class="min-w-full min-h-full" alt="" />
-    </div>
   </div>
-  <div class="pt-[150px] lg:px-[350px] px-[100px]">
+  <div class="flex min-w-[50%] mt-[100px] lg:mt-[0px] landing-img">
+    <img src="/spaceship.jpeg" class="min-w-full lg:min-w-[50%]" alt="" />
+  </div>
+  </div>
+  <div class="lg:pt-[150px] lg:px-[350px] px-[100px]">
     <div class="flex flex-col item gap-[150px]">
       <div class="flex lg:flex-row flex-col lg:gap-[110px] justify-center items-center">
-        <img class="lg:w-[600px] lg:h-[600px] h-[400px] w-[620px] rounded-[50px]" src="/ufo.jpeg" alt="" />
+        <img class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px]" src="/ufo.jpeg" alt="" />
         <div class="flex flex-col mt-[50px] lg:justify-center min-w-[510px]">
           <h1 class="text-white text-[48px] mb-[30px]">Welcome to Nomad Labs</h1>
           <svg
@@ -74,9 +78,9 @@
         </div>
       </div>
   
-      <div class="flex gap-[110px] justify-center">
-        <div class="flex flex-col justify-center min-w-[510px]">
-          <h1 class="text-white text-[48px] mb-[30px]">What We Do</h1>
+      <div class="flex flex-col lg:flex-row lg:gap-[110px] justify-center wedo-container">
+        <div class="flex flex-col justify-center min-w-[510px] wedo-desc">
+          <h1 class="text-white text-[48px] mb-[30px] mt-[50px] lg:mt-[0px]">What We Do</h1>
           <svg
             width="160"
             height="12"
@@ -89,7 +93,7 @@
               fill="#666666"
             />
           </svg>
-          <div class="mt-[35px] flex flex-col gap-[10px]">
+          <div class="lg:mt-[35px] flex flex-col gap-[10px]">
             <p class="text-white description text-[18px]">
               Are you looking to launch your next big project? Bring your website
               to the next level? Or explore new frontiers in Web3?
@@ -104,11 +108,13 @@
             </p>
           </div>
         </div>
-        <img
-          class="w-[600px] h-[600px] rounded-[50px]"
+        <div class="wedo-img">
+          <img
+          class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px]"
           src="bluesky.jpeg"
           alt=""
         />
+        </div>
       </div>
   
       <div class="flex justify-center">
@@ -127,9 +133,9 @@
             />
           </svg>
           <div class="mt-[65px]">
-            <div class="flex gap-[70px] mb-[150px]">
+            <div class="lg:flex lg:gap-[70px] grid grid-cols-2 mb-[150px] gap-[60px]">
               <div
-                class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] border-round px-[25px] mb-[40px]"
+                class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] border-round px-[25px] lg:mb-[40px]"
               >
                 <h1 class="text-[24px]">01 - Hassle Free</h1>
                 <p class="description-about-us">
@@ -140,7 +146,7 @@
                 </p>
               </div>
               <div
-                class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[40px] m-[auto] border-round px-[25px]"
+                class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] lg:pt-[40px] m-[auto] border-round px-[25px]"
               >
                 <h1 class="text-[24px]">02 - Innovative</h1>
                 <p class="description-about-us">
@@ -150,7 +156,7 @@
                 </p>
               </div>
               <div
-                class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] m-[auto] border-round px-[25px] mb-[40px]"
+                class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] m-[auto] border-round px-[25px] lg:mb-[40px]"
               >
                 <h1 class="text-[24px]">03 - Communication</h1>
                 <p class="description-about-us">
@@ -205,5 +211,61 @@
 
   .border-round {
     border-radius: 25px;
+  }
+
+  .landing-container {
+    max-width: 100vw;
+  }
+
+  .landing-img {
+    min-width: 100%;
+    max-height: 100vh;
+  }
+
+  .landing-img img {
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+  }
+
+  @media (max-width: 1024px) {
+    .landing-container, .wedo-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* optional */
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
+
+  .landing-title, .wedo-desc {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+  }
+
+  .wedo-img, .landing-img {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+  }
+
+  .landing-img {
+    max-height: 50vh;
+  }
   }
 </style>
