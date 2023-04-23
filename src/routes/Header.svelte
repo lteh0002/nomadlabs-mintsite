@@ -178,7 +178,7 @@
 
 <header
   id="nav"
-  class="h-[100px] flex items-center px-[70px] z-50 sticky-nav justify-between lg:justify-around {isPageTop
+  class="h-[100px] flex items-center px-[20px] sm:px-[70px] z-50 sticky-nav justify-between lg:justify-around {isPageTop
     ? ''
     : 'background'}"
 >

@@ -20,7 +20,7 @@
   {entry[0]}
 </button>
 {#if isOpen}
-  <ul class="list-disc list-inside ml-[35px]" transition:slide={{ duration: 300 }}>
+  <ul class="list-disc list-inside sm:ml-[35px]" transition:slide={{ duration: 300 }}>
     {#each entry[1] as item}
       <li class="roadmap-desc">{item}</li>
     {/each}
@@ -38,6 +38,12 @@
     margin: 0;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
+  }
+
+  @media (max-width: 640px) {
+    button {
+      font-size: 14px;
+    }
   }
 
   svg {

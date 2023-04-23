@@ -1,5 +1,5 @@
 <div id="explore" class="flex justify-center flex-col items-center pb-[150px]">
-  <h1 class="text-white text-[40px] pb-[25px]">
+  <h1 class="text-white sm:text-[40px] text-[30px] pb-[25px] w-[315px] sm:w-full text-center">
     Explore the Web3 Universe With Us
   </h1>
   <svg width="141" height="12" viewBox="0 0 141 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,13 +15,13 @@
   <div
     class="text-white  w-[770px] text-[18px] flex flex-col items-center gap-[30px]"
   >
-    <p class="description pt-[30px] text-center">
+    <p class="description pt-[30px] text-center sm:text-[18px] text-[14px]">
       Stay connected for future updates
     </p>
   </div>
 
   <div
-    class=" text-white h-[50px] w-[180px] flex justify-center items-center mt-[40px] gap-[60px]"
+    class=" text-white h-[50px] w-[180px] flex flex-col sm:flex-row justify-center items-center sm:mt-[40px] mt-[130px] sm:gap-[60px] gap-[50px]"
   >
   <a href="https://discord.com/invite/PQqmXUYYfD" target="_blank"> 
     <div class="flex gap-[10px]">

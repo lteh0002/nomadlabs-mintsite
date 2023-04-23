@@ -16,8 +16,8 @@
     <div id="landingpage" class="flex flex-col justify-between sticky">
       <Header />
       <div class="flex flex-col items-center justify-center flex-1 gap-[48px]">
-        <img class="w-[362px] h-[88px]" src="nl-fulllogo.png" alt="" />
-        <h1 id="desc">Navigating the Web 3 Universe</h1>
+        <img class="w-[200px] h-[48px] sm:w-[362px] sm:h-[88px]" src="nl-fulllogo.png" alt="" />
+        <h1 id="desc" class="text-[30px] sm:text-[48px]">Navigating the Web 3 Universe</h1>
       </div>
 
       <div class="flex flex-col items-center gap-[16px] mb-[24px]">
@@ -42,7 +42,7 @@
           </defs>
         </svg>
 
-        <h1 id="scroll-prompt" class="text-white text-[24px]">Explore the Genesis Collection</h1>
+        <h1 id="scroll-prompt" class="text-white text-[16px] sm:text-[24px]">Explore the Genesis Collection</h1>
       </div>
     </div>
     <GenesisCollection />
@@ -65,7 +65,6 @@
   #desc {
     font-family: "Oswald", sans-serif;
     color: white;
-    font-size: 48px;
   }
 
   #scroll-prompt {

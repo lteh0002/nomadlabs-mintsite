@@ -173,7 +173,7 @@
 
 <header
   id="nav"
-  class="h-[100px] flex items-center justify-between lg:justify-around px-[70px] z-50 sticky-nav background"
+  class="h-[100px] flex items-center justify-between lg:justify-around px-[20px] sm:px-[70px] z-50 sticky-nav background"
 >
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <img

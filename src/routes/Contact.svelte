@@ -1,6 +1,6 @@
 <div id="contact" class="flex justify-center flex-col items-center">
   <div class="text-holder">
-    <h1 class="text-white text-[48px] pb-[30px]">
+    <h1 class="text-white sm:text-[48px] text-[30px] pb-[30px] w-[350px] sm:w-full text-center">
       Let's Build Something Great Together
     </h1>
     <svg
@@ -23,13 +23,13 @@
       </defs>
     </svg>
     <div
-      class="text-white  w-[770px] text-[18px] flex flex-col items-center gap-[30px]"
+      class="text-white  sm:w-[770px] w-[350px] text-[18px] flex flex-col items-center gap-[30px]"
     >
-      <p class="description pt-[30px] text-center">
+      <p class="description pt-[30px] text-center text-[14px] sm:text-[18px]">
         At Nomad Labs, we're passionate about delivering innovative solutions and
         helping our clients succeed.
       </p>
-      <p class="description text-center">
+      <p class="description text-center text-[14px] sm:text-[18px]">
         If you're ready to take your digital vision to the next level, we'd love
         to hear from you. Contact us today to learn more about how we can help
         bring your vision to life.

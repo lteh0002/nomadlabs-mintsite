@@ -1,10 +1,10 @@
 <div class="bg-[#111111] min-w-[100vw] min-h-[600px] pt-[150px] pb-[150px]">
-  <div class="lg:px-[350px] px-[100px]">
+  <div class="lg:px-[350px] sm:px-[100px]">
     <div class="flex flex-col item gap-[150px]">
       <div class="flex lg:flex-row flex-col lg:gap-[110px] justify-center items-center container">
-        <div class="flex flex-col lg:justify-center min-w-[500px] first_div mt-[50px] lg:mt-[0px]">
-          <h1 class="text-white text-[48px] mb-[20px]">Utility</h1>
-          <svg width="261" height="12" viewBox="0 0 261 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="flex flex-col lg:justify-center min-w-[500px] first_div mt-[50px] lg:mt-[0px] px-[20px]">
+          <h1 class="text-white sm:text-[48px] text-[30px] mb-[20px]">Utility</h1>
+          <svg class="sm:w-[261px] sm:h-[12px] w-[112px] h-[12px]" viewBox="0 0 261 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_166_71)">
             <path d="M260.042 4.75843V6.85355H52.3211C52.0069 7.47161 51.434 7.90111 50.7687 7.90111C50.1034 7.90111 49.5121 7.49257 49.1979 6.85355H30.4402C30.163 8.06872 29.4238 8.94868 28.5922 8.94868C27.7606 8.94868 27.0029 8.08968 26.7441 6.85355H9.13224C8.76263 9.37818 7.0809 11.2952 5.04805 11.2952C3.0152 11.2952 1.33348 9.42008 0.963867 6.89546V4.80033C1.33348 2.23381 3.0152 0.316772 5.04805 0.316772C7.0809 0.316772 8.74415 2.23381 9.13224 4.75843H26.7441C27.0213 3.54326 27.7606 2.66331 28.5922 2.66331C29.4238 2.66331 30.1815 3.52231 30.4402 4.75843H49.1979C49.5121 4.14037 50.1034 3.71087 50.7687 3.71087C51.434 3.71087 52.0069 4.11942 52.3211 4.75843H260.042Z" fill="#666666"/>
             <path d="M0.964744 4.75842V6.85354C0.927117 6.50466 0.927117 6.15487 0.964744 5.80598C0.927117 5.4571 0.927117 5.10731 0.964744 4.75842Z" fill="#666666"/>
@@ -16,7 +16,7 @@
             </defs>
             </svg>
             <div class="mt-[30px]">
-              <ul class="list-decimal list-inside flex flex-col gap-[10px]">
+              <ul class="list-decimal list-inside flex flex-col gap-[10px] max-w-[350px] sm:max-w-full">
                 <li class="utility-desc">Benefits throughout the launchpad</li>
                 <ul class="list-disc list-inside ml-[20px] flex flex-col gap-[10px]">
                   <li class="utility-desc">
@@ -44,8 +44,8 @@
             </div>
 
         </div>
-        <div class="second_div">
-          <img class="lg:min-w-[600px] lg:h-[600px] h-[400px] w-[620px] rounded-[50px]" src="/walkietalkie.png" alt="" />
+        <div class="second_div flex justify-center w-full">
+          <img class="lg:min-w-[600px] lg:h-[600px] sm:min-h-[400px] sm:min-w-[620px] max-w-[350px] min-h-[400px] rounded-[50px]" src="/walkietalkie.png" alt="" />
         </div>
       </div>
     </div>
@@ -61,6 +61,12 @@
   .utility-desc {
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
+  }
+
+  @media (max-width: 640px) {
+    .utility-desc {
+      font-size: 14px;
+    }
   }
 
   @media (max-width: 1024px) {
