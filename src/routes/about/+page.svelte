@@ -1,9 +1,9 @@
 <script>
   import NormalHeader from "../NormalHeader.svelte";
   import Contact from "../Contact.svelte";
-  import {navigation} from "./../../utils/nav.js"
-  navigation.reset()
-  navigation.about()
+  import { navigation } from "./../../utils/nav.js";
+  navigation.reset();
+  navigation.about();
 </script>
 
 <NormalHeader />
@@ -11,49 +11,63 @@
   <div
     class="flex flex-col lg:flex-row lg:justify-between lg:items-center bg-[#111111] min-w-[100vw] min-h-screen landing-container"
   >
-  <div class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title sm:px-[100px] px-[20px] flex-1 justify-center">
-    <div>
-      <div class="flex flex-1 flex-col justify-center text-white gap-[10px] lg:min-h-[50%]">
-        <h1 class="sm:text-[48px] text-[36px]">About Us</h1>
-        <svg
-          width="160"
-          height="12"
-          viewBox="0 0 160 12"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+    <div
+      class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title sm:px-[100px] px-[20px] flex-1 justify-center"
+    >
+      <div>
+        <div
+          class="flex flex-1 flex-col justify-center text-white gap-[10px] lg:min-h-[50%]"
         >
-          <g clip-path="url(#clip0_21_234)">
-            <path
-              d="M160 4.8365V7.11787H31.7627C31.5687 7.79087 31.215 8.25855 30.8043 8.25855C30.3936 8.25855 30.0285 7.81369 29.8345 7.11787H18.2544C18.0832 8.44106 17.6269 9.39924 17.1135 9.39924C16.6001 9.39924 16.1323 8.46388 15.9726 7.11787H5.09979C4.87161 9.86692 3.83339 11.9544 2.5784 11.9544C1.32341 11.9544 0.285187 9.91255 0.0570068 7.1635V4.88213C0.285187 2.08745 1.32341 0 2.5784 0C3.83339 0 4.8602 2.08745 5.09979 4.8365H15.9726C16.1437 3.51331 16.6001 2.55513 17.1135 2.55513C17.6269 2.55513 18.0947 3.49049 18.2544 4.8365H29.8345C30.0285 4.1635 30.3936 3.69582 30.8043 3.69582C31.215 3.69582 31.5687 4.14068 31.7627 4.8365H160Z"
-              fill="#666666"
-            />
-            <path
-              d="M0.0577054 4.8365V7.11787C0.0344758 6.73797 0.0344758 6.35709 0.0577054 5.97719C0.0344758 5.59729 0.0344758 5.2164 0.0577054 4.8365Z"
-              fill="#666666"
-            />
-          </g>
-          <defs>
-            <clipPath id="clip0_21_234">
-              <rect width="160" height="12" fill="white" />
-            </clipPath>
-          </defs>
-        </svg>
-        <p class="sm:text-[18px] text-[14px] desc">
-          Let us help you bring your digital vision to life
-        </p>
+          <h1 class="sm:text-[48px] text-[36px]">About Us</h1>
+          <svg
+            width="160"
+            height="12"
+            viewBox="0 0 160 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_21_234)">
+              <path
+                d="M160 4.8365V7.11787H31.7627C31.5687 7.79087 31.215 8.25855 30.8043 8.25855C30.3936 8.25855 30.0285 7.81369 29.8345 7.11787H18.2544C18.0832 8.44106 17.6269 9.39924 17.1135 9.39924C16.6001 9.39924 16.1323 8.46388 15.9726 7.11787H5.09979C4.87161 9.86692 3.83339 11.9544 2.5784 11.9544C1.32341 11.9544 0.285187 9.91255 0.0570068 7.1635V4.88213C0.285187 2.08745 1.32341 0 2.5784 0C3.83339 0 4.8602 2.08745 5.09979 4.8365H15.9726C16.1437 3.51331 16.6001 2.55513 17.1135 2.55513C17.6269 2.55513 18.0947 3.49049 18.2544 4.8365H29.8345C30.0285 4.1635 30.3936 3.69582 30.8043 3.69582C31.215 3.69582 31.5687 4.14068 31.7627 4.8365H160Z"
+                fill="#666666"
+              />
+              <path
+                d="M0.0577054 4.8365V7.11787C0.0344758 6.73797 0.0344758 6.35709 0.0577054 5.97719C0.0344758 5.59729 0.0344758 5.2164 0.0577054 4.8365Z"
+                fill="#666666"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_21_234">
+                <rect width="160" height="12" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <p class="sm:text-[18px] text-[14px] desc">
+            Let us help you bring your digital vision to life
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="flex min-w-[50%] mt-[100px] lg:mt-[0px] landing-img">
-    <img src="/spaceship.jpeg" class="min-w-full lg:min-w-[50%]" alt="" />
-  </div>
+    <div class="flex min-w-[50%] mt-[100px] lg:mt-[0px] landing-img">
+      <img src="/spaceship.jpeg" class="min-w-full lg:min-w-[50%]" alt="" />
+    </div>
   </div>
   <div class="lg:pt-[150px] lg:px-[350px] sm:px-[100px] px-[20px]">
     <div class="flex flex-col item gap-[150px]">
-      <div class="flex lg:flex-row flex-col lg:gap-[110px] justify-center items-center">
-        <img class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px]" src="/ufo.jpeg" alt="" />
-        <div class="flex flex-col mt-[50px] lg:justify-center w-full sm:min-w-[510px]">
-          <h1 class="text-white sm:text-[48px] text-[30px] mb-[30px]">Welcome to Nomad Labs</h1>
+      <div
+        class="flex lg:flex-row flex-col lg:gap-[110px] justify-center items-center"
+      >
+        <img
+          class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px]"
+          src="/ufo.jpeg"
+          alt=""
+        />
+        <div
+          class="flex flex-col mt-[50px] lg:justify-center w-full sm:min-w-[510px]"
+        >
+          <h1 class="text-white sm:text-[48px] text-[30px] mb-[30px]">
+            Welcome to Nomad Labs
+          </h1>
           <svg
             width="160"
             height="12"
@@ -67,20 +81,30 @@
             />
           </svg>
           <div class="lg:mt-[35px]">
-            <p class="text-white description sm:text-[18px] text-[14px] max-w-[350px] sm:max-w-full">
+            <p
+              class="text-white description sm:text-[18px] text-[14px] max-w-[350px] sm:max-w-full"
+            >
               We are a forward-thinking Web-as-a-Service (WaaS) studio based in
-              Asia, dedicated to pushing the boundaries of what's possible in the
-              digital world. Our team of experts in design, development, and
-              strategy are committed to delivering innovative solutions that meet
-              your needs and exceed your expectations.
+              Asia, dedicated to pushing the boundaries of what's possible in
+              the digital world. Our team of experts in design, development, and
+              strategy are committed to delivering innovative solutions that
+              meet your needs and exceed your expectations.
             </p>
           </div>
         </div>
       </div>
-  
-      <div class="flex flex-col lg:flex-row lg:gap-[110px] justify-center wedo-container">
-        <div class="flex flex-col justify-center min-w-[510px] wedo-desc">
-          <h1 class="text-white sm:text-[48px] text-[30px] mb-[30px] mt-[50px] lg:mt-[0px]">What We Do</h1>
+
+      <div
+        class="flex flex-col lg:flex-row lg:gap-[110px] items-center justify-center wedo-container"
+      >
+        <div
+          class="flex flex-col justify-center min-w-[510px] wedo-desc"
+        >
+          <h1
+            class="text-white sm:text-[48px] text-[30px] mb-[30px] mt-[50px] lg:mt-[0px]"
+          >
+            What We Do
+          </h1>
           <svg
             width="160"
             height="12"
@@ -94,14 +118,20 @@
             />
           </svg>
           <div class="lg:mt-[35px] flex flex-col gap-[10px]">
-            <p class="text-white description sm:text-[18px] text-[16px] max-w-[340px] sm:max-w-full">
-              Are you looking to launch your next big project? Bring your website
-              to the next level? Or explore new frontiers in Web3?
+            <p
+              class="text-white description sm:text-[18px] text-[16px] max-w-[340px] sm:max-w-full"
+            >
+              Are you looking to launch your next big project? Bring your
+              website to the next level? Or explore new frontiers in Web3?
             </p>
-            <p class="text-white description sm:text-[18px] text-[16px] max-w-[340px] sm:max-w-full">
+            <p
+              class="text-white description sm:text-[18px] text-[16px] max-w-[340px] sm:max-w-full"
+            >
               We have the skills and expertise to make it happen.
             </p>
-            <p class="text-white description sm:text-[18px] text-[16px] max-w-[340px] sm:max-w-full">
+            <p
+              class="text-white description sm:text-[18px] text-[16px] max-w-[340px] sm:max-w-full"
+            >
               Our team of experts in design, development, and strategy are
               committed to delivering innovative solutions that meet your needs
               and exceed your expectations.
@@ -117,13 +147,13 @@
         </div>
         <div class="wedo-img">
           <img
-          class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px]"
-          src="bluesky.jpeg"
-          alt=""
-        />
+            class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px]"
+            src="bluesky.jpeg"
+            alt=""
+          />
         </div>
       </div>
-  
+
       <div class="flex justify-center">
         <div class="flex flex-col items-center gap-[25px]">
           <h1 class="text-white sm:text-[48px] text-[30px]">Why Choose Us?</h1>
@@ -140,7 +170,9 @@
             />
           </svg>
           <div class="sm:mt-[65px] mt-[30px]">
-            <div class="lg:flex lg:gap-[70px] grid sm:grid-cols-2 sm:grid-rows-2 grid-rows-4 grid-cols-1 mb-[150px] sm:gap-[60px] gap-[30px]">
+            <div
+              class="lg:flex lg:gap-[70px] grid sm:grid-cols-2 sm:grid-rows-2 grid-rows-4 grid-cols-1 mb-[150px] sm:gap-[60px] gap-[30px]"
+            >
               <div
                 class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] border-round px-[25px] lg:mb-[40px]"
               >
@@ -158,8 +190,8 @@
                 <h1 class="text-[24px]">02 - Innovative</h1>
                 <p class="description-about-us">
                   We are constantly exploring new technologies and solutions to
-                  provide our community with the most innovative and cutting-edge
-                  products and services.
+                  provide our community with the most innovative and
+                  cutting-edge products and services.
                 </p>
               </div>
               <div
@@ -235,43 +267,44 @@
   }
 
   @media (max-width: 1024px) {
-    .landing-container, .wedo-container {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    /* optional */
-    -webkit-box-align: start;
-    -moz-box-align: start;
-    -ms-flex-align: start;
-    -webkit-align-items: flex-start;
-    align-items: flex-start;
-  }
+    .landing-container,
+    .wedo-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      /* optional */
+      -webkit-box-align: start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
+    }
 
-  .landing-title, .wedo-desc {
-    -webkit-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
-    -ms-flex-order: 2;
-    -webkit-order: 2;
-    order: 2;
-  }
+    .landing-title,
+    .wedo-desc {
+      -webkit-box-ordinal-group: 2;
+      -moz-box-ordinal-group: 2;
+      -ms-flex-order: 2;
+      -webkit-order: 2;
+      order: 2;
+    }
 
-  .wedo-img, .landing-img {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -ms-flex-order: 1;
-    -webkit-order: 1;
-    order: 1;
-  }
+    .wedo-img,
+    .landing-img {
+      -webkit-box-ordinal-group: 1;
+      -moz-box-ordinal-group: 1;
+      -ms-flex-order: 1;
+      -webkit-order: 1;
+      order: 1;
+    }
 
-  .landing-img {
-    max-height: 50vh;
-  }
+    .landing-img {
+      max-height: 50vh;
+    }
   }
 </style>
