@@ -79,8 +79,8 @@
 
   </div>
 
-  <div class="pl-[60px]">
-    <ul class="text-white mt-[150px] text-[48px] flex flex-col gap-[20px]">
+  <div class="sm:pl-[60px] pl-[30px]">
+    <ul class="text-white sm:mt-[100px] mt-[80px] sm:text-[48px] text-[30px] flex flex-col gap-[10px]">
       <li>
         <a
           class={$navigation == "home" ? "text-[white]" : "text-[grey]"}
@@ -129,7 +129,7 @@
     </ul>
   </div>
 
-  <div class="flex gap-[30px] ml-[60px] mt-[200px]">
+  <div class="flex flex-col sm:flex-row gap-[20px] sm:gap-[30px] sm:ml-[60px] ml-[30px] absolute bottom-[120px] sm:bottom-[150px]">
     <a href="https://discord.com/invite/PQqmXUYYfD">
       <div class="flex justify-center gap-[20px] items-center border min-w-[180px] min-h-[50px] h-[50px]">
         <svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -154,9 +154,11 @@
     </a>
   </div>
 
-  <div class="footer flex text-[#BBBBBB] min-h-[100px] items-center px-[70px] justify-between">
-    <p class="text-[16px] ">Copyright © 2023 Nomad Labs. All Rights Reserved</p>
-    <div class="flex gap-[25px]">
+  <div class="footer-container gap-[15px] flex flex-col justify-center sm:flex-row text-[#BBBBBB] min-h-[100px] items-center px-[70px] sm:justify-between sm:gap-[0px] absolute bottom-0">
+    <div class="first_div">
+      <p class="text-[16px] min-w-[320px]">Copyright © 2023 Nomad Labs. All Rights Reserved.</p>
+    </div>
+    <div class="flex gap-[25px] second_div">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.99992 18V10H5.33325V7.33333H7.99992V5.90133C7.99992 3.19 9.32059 2 11.5739 2C12.6533 2 13.2239 2.08 13.4939 2.11667V4.66667H11.9573C11.0006 4.66667 10.6666 5.17133 10.6666 6.194V7.33333H13.4699L13.0893 10H10.6666V18H7.99992Z" fill="#BBBBBB"/>
       </svg>
@@ -268,10 +270,11 @@
     color: #BBBBBB;
   }
 
-  .footer {
+  .footer-container {
     border-top: 1px solid white;
     position: absolute;
     bottom: 0;
+    width: 100%;
   }
 
   @media (min-width: 1024px) {
@@ -279,5 +282,40 @@
       right: -50%;
       width: 50%;
     }
+  }
+
+  @media (max-width: 640px) {
+    .footer-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      /* optional */
+      -webkit-box-align: start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
+    }
+
+    .footer-container .first_div {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+    }
+
+    .footer-container .second_div {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+  } 
   }
 </style>

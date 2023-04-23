@@ -65,7 +65,7 @@
             </defs>
           </svg>
 
-          <div class="lg:mt-[15px] mt-[20px] sm:text-[18px] text-[14px] whitespace-normal">
+          <div class="lg:mt-[15px] mt-[20px] whitespace-normal max-w-[350px] sm:max-w-full">
             {#each Object.entries(data) as entry}
               <Item {entry} />
             {/each}

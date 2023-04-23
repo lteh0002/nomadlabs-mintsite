@@ -22,7 +22,7 @@
 {#if isOpen}
   <ul class="list-disc list-inside sm:ml-[35px]" transition:slide={{ duration: 300 }}>
     {#each entry[1] as item}
-      <li class="roadmap-desc">{item}</li>
+      <li class="roadmap-desc text-[14px] sm:text-[18px]">{item}</li>
     {/each}
   </ul>
 {/if}
@@ -42,7 +42,7 @@
 
   @media (max-width: 640px) {
     button {
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 
@@ -58,4 +58,6 @@
   .roadmap-desc {
     font-family: "Open Sans", sans-serif;
   }
+
+  
 </style>

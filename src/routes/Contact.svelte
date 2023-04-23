@@ -1,6 +1,12 @@
+<script>
+  import { navigation } from "./../utils/nav.js";
+</script>
+
 <div id="contact" class="flex justify-center flex-col items-center">
   <div class="text-holder">
-    <h1 class="text-white sm:text-[48px] text-[30px] pb-[30px] w-[350px] sm:w-full text-center">
+    <h1
+      class="text-white lg:text-[48px] sm:text-[36px] text-[30px] pb-[30px] w-[350px] sm:w-full text-center"
+    >
       Let's Build Something Great Together
     </h1>
     <svg
@@ -23,34 +29,40 @@
       </defs>
     </svg>
     <div
-      class="text-white  sm:w-[770px] w-[350px] text-[18px] flex flex-col items-center gap-[30px]"
+      class="text-white sm:w-[770px] w-[350px] text-[18px] flex flex-col items-center gap-[30px]"
     >
       <p class="description pt-[30px] text-center text-[14px] sm:text-[18px]">
-        At Nomad Labs, we're passionate about delivering innovative solutions and
-        helping our clients succeed.
+        At Nomad Labs, we're passionate about delivering innovative solutions
+        and helping our clients succeed.
       </p>
-      <p class="description text-center text-[14px] sm:text-[18px]">
+      <p
+        class="{$navigation === 'home' ? 'hidden' : 'block'} description text-center text-[14px] sm:text-[18px]"
+      >
         If you're ready to take your digital vision to the next level, we'd love
         to hear from you. Contact us today to learn more about how we can help
         bring your vision to life.
       </p>
+      <p
+        class="{$navigation === 'home' ? 'block' : 'hidden'} description text-center text-[14px] sm:text-[18px]"
+      >
+        Interested to learn more about us ?
+      </p>
     </div>
-  
+
     <a href="mailto:contact@nomadlabs.space">
       <div
-      class="border text-white h-[50px] w-[180px] flex justify-center items-center mt-[40px] button-hover"
-    >
-      Get In Touch
-    </div>
+        class="border text-white h-[50px] w-[180px] flex justify-center items-center mt-[40px] button-hover"
+      >
+        Get In Touch
+      </div>
     </a>
   </div>
-
 </div>
 
 <style>
   #contact {
-    min-height: 750px;
-    height: 500px;
+    min-height: 500px;
+    /* height: 500px; */
   }
 
   .text-holder {
@@ -79,12 +91,12 @@
   }
 
   .button-hover:hover {
-    border-color: #BBBBBB;
+    border-color: #bbbbbb;
   }
 
   @media (max-width: 1024px) {
     .text-holder {
-      max-width: 660px; 
+      max-width: 660px;
     }
   }
 </style>

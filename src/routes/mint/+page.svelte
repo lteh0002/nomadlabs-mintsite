@@ -9,10 +9,10 @@
 <NormalHeader />
 <div class="flex min-h-screen items-center bg-[#111111] min-w-[100vw]">
   <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center bg-[#111111] min-w-[100vw] min-h-screen landing-container">
-    <div class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title px-[100px] flex-1 justify-center">
+    <div class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title sm:px-[100px] px-[20px] flex-1 justify-center">
       <div>
         <div class="flex flex-1 flex-col justify-center text-white gap-[10px] lg:min-h-[50%]">
-          <h1 class="text-[48px]">Mint</h1>
+          <h1 class="sm:text-[48px] text-[36px]">Mint</h1>
           <svg
             width="160"
             height="12"
@@ -36,17 +36,21 @@
               </clipPath>
             </defs>
           </svg>
-          <p class="text-[18px]">Coming Soon</p>
+          <p class="sm:text-[18px] text-[14px] desc">Coming Soon</p>
         </div>
       </div>
     </div>
-    <div class="flex min-w-[50%] mt-[100px] lg:mt-[0px] landing-img">
+    <div class="flex min-w-[50%] sm:mt-[100px] mt-[50px] lg:mt-[0px] landing-img">
       <img src="/astronaut5.jpeg" class="min-w-full lg:min-w-[50%]" alt="" />
     </div>
   </div>
 </div>
 
 <style>
+  .desc {
+    font-family: "Open Sans", sans-serif;
+  }
+
   .landing-container {
     max-width: 100vw;
   }

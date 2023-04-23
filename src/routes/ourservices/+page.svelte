@@ -61,11 +61,11 @@
     class="flex flex-col lg:flex-row lg:justify-between lg:items-center bg-[#111111] min-w-[100vw] min-h-screen landing-container"
   >
     <div
-      class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title px-[100px] flex-1 justify-center"
+      class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title sm:px-[100px] px-[20px] flex-1 justify-center"
     >
       <div>
-        <div class="flex flex-col gap-[20px] text-white">
-          <h1 class="text-[48px]">Services</h1>
+        <div class="flex flex-col sm:gap-[20px] gap-[15px] text-white">
+          <h1 class="lg:text-[48px] text-[36px]">Services</h1>
           <svg
             width="160"
             height="12"
@@ -89,23 +89,23 @@
               </clipPath>
             </defs>
           </svg>
-          <ul class="list-disc list-inside flex flex-col gap-[10px]">
-            <li class="text-[18px]">UI/UX Design</li>
-            <li class="text-[18px]">Web3 Solutions</li>
-            <li class="text-[18px]">Branding & Identity</li>
-            <li class="text-[18px]">Custom Development</li>
-            <li class="text-[18px]">Website Design & Development</li>
-            <li class="text-[18px]">Launchpad (Coming Soon)</li>
+          <ul class="list-disc list-inside flex flex-col sm:gap-[10px] gap-[0px]">
+            <li class="lg:text-[18px] sm:text-[16px] text-[12px] list">UI/UX Design</li>
+            <li class="lg:text-[18px] sm:text-[16px] text-[12px] list">Web3 Solutions</li>
+            <li class="lg:text-[18px] sm:text-[16px] text-[12px] list">Branding & Identity</li>
+            <li class="lg:text-[18px] sm:text-[16px] text-[12px] list">Custom Development</li>
+            <li class="lg:text-[18px] sm:text-[16px] text-[12px] list">Website Design & Development</li>
+            <li class="lg:text-[18px] sm:text-[16px] text-[12px] list">Launchpad (Coming Soon)</li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="flex min-w-[50%] mt-[100px] lg:mt-[0px] landing-img">
+    <div class="flex min-w-[50%] sm:mt-[100px] mt-[50px] lg:mt-[0px] landing-img">
       <img src="/staring.jpeg" class="min-w-full lg:min-w-[50%]" alt="" />
     </div>
   </div>
   <div class="flex flex-col items-center gap-[20px] pt-[100px]">
-    <h1 class="text-white text-[48px]">What We Do</h1>
+    <h1 class="text-white sm:text-[48px] text-[30px]">What We Do</h1>
     <svg
       width="141"
       height="9"
@@ -188,9 +188,7 @@
                     </clipPath>
                   </defs>
                 </svg>
-                <p
-                  class="lg:text-[18px] text-[12px] min-h-[54px] description"
-                >
+                <p class="lg:text-[18px] text-[12px] min-h-[54px] description">
                   A great user experience starts with great design. Our team of
                   UI/UX experts will work with you to create an intuitive,
                   seamless experience for your users.
@@ -206,7 +204,7 @@
             </div>
           </div>
         </div>
-        <div id="slide4" class="carousel-item relative w-full h-full">
+        <div id="slide2" class="carousel-item relative w-full h-full">
           <div
             class="flex flex-col sm:flex-row justify-around items-center border w-full lg:gap-[10px] rounded-2xl"
           >
@@ -255,11 +253,13 @@
                   </defs>
                 </svg>
                 <p class="lg:text-[18px] text-[12px] description">
-                  Our team of developers has the skills and experience to tackle
-                  any custom development project, from simple applications to
-                  complex solutions. We work closely with our clients to ensure
-                  that the final product meets their needs and exceeds their
-                  expectations.
+                  <span class="hidden sm:inline description"
+                    >Our team of developers has the skills and experience to
+                    tackle any custom development project, from simple
+                    applications to complex solutions.</span
+                  >
+                  We work closely with our clients to ensure that the final product
+                  meets their needs and exceeds their expectations.
                 </p>
                 <a href="mailto:contact@nomadlabs.space"
                   ><button
@@ -321,10 +321,12 @@
                   </defs>
                 </svg>
                 <p class="lg:text-[18px] text-[12px] description">
-                  A well-designed website can make all the difference. Our team
-                  of experts will work with you to create a website that not
-                  only looks great but is also user-friendly, fast, and
-                  optimized for search engines.
+                  <span class="hidden sm:inline description"
+                    >A well-designed website can make all the difference.</span
+                  >
+                  Our team of experts will work with you to create a website that
+                  not only looks great but is also user-friendly, fast, and optimized
+                  for search engines.
                 </p>
                 <a href="mailto:contact@nomadlabs.space"
                   ><button
@@ -388,9 +390,11 @@
                 <p class="lg:text-[18px] text-[12px] description">
                   Our team of developers has the skills and experience to tackle
                   any custom development project, from simple applications to
-                  complex solutions. We work closely with our clients to ensure
-                  that the final product meets their needs and exceeds their
-                  expectations.
+                  complex solutions.
+                  <span class="hidden sm:inline description">
+                    We work closely with our clients to ensure that the final
+                    product meets their needs and exceeds their expectations.</span
+                  >
                 </p>
                 <a href="mailto:contact@nomadlabs.space"
                   ><button
@@ -452,10 +456,13 @@
                   </defs>
                 </svg>
                 <p class="lg:text-[18px] text-[12px] description">
-                  A strong brand is key to standing out in today's crowded
-                  marketplace. Our team of branding experts will work with you
-                  to create a unique and memorable brand that accurately
-                  represents your business.
+                  <span class="hidden sm:inline description"
+                    >Our team of developers has the skills and experience to
+                    tackle any custom development project, from simple
+                    applications to complex solutions.
+                  </span>
+                  We work closely with our clients to ensure that the final product
+                  meets their needs and exceeds their expectations.
                 </p>
                 <a href="mailto:contact@nomadlabs.space"
                   ><button
@@ -481,8 +488,11 @@
   }
 
   .description {
-    font-family: "Open Sans", sans-serif;
     text-align: justify;
+  }
+
+  .list, .description {
+    font-family: "Open Sans", sans-serif;
   }
 
   .contact-btn {

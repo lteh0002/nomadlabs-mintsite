@@ -45,7 +45,7 @@
 
         </div>
         <img
-          class="lg:w-[600px] lg:h-[600px] sm:h-[400px] sm:min-w-[620px] min-h-[450px] rounded-[50px]"
+          class="lg:w-[600px] lg:h-[600px] sm:h-[400px] sm:min-w-[620px] min-h-[450px] min--w-[350px] rounded-[50px]"
           src="/walkietalkie.png"
           alt=""
         />
@@ -98,13 +98,13 @@
     -webkit-order: 2;
     order: 2;
   }
-
+/* 
   .container .second_div {
     -webkit-box-ordinal-group: 1;
     -moz-box-ordinal-group: 1;
     -ms-flex-order: 1;
     -webkit-order: 1;
     order: 1;
-  }
+  } */
   }
 </style>

@@ -11,10 +11,10 @@
   <div
     class="flex flex-col lg:flex-row lg:justify-between lg:items-center bg-[#111111] min-w-[100vw] min-h-screen landing-container"
   >
-  <div class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title px-[100px] flex-1 justify-center">
+  <div class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title sm:px-[100px] px-[20px] flex-1 justify-center">
     <div>
       <div class="flex flex-1 flex-col justify-center text-white gap-[10px] lg:min-h-[50%]">
-        <h1 class="text-[48px]">About Us</h1>
+        <h1 class="sm:text-[48px] text-[36px]">About Us</h1>
         <svg
           width="160"
           height="12"
@@ -38,7 +38,7 @@
             </clipPath>
           </defs>
         </svg>
-        <p class="text-[18px]">
+        <p class="sm:text-[18px] text-[14px] desc">
           Let us help you bring your digital vision to life
         </p>
       </div>
@@ -48,12 +48,12 @@
     <img src="/spaceship.jpeg" class="min-w-full lg:min-w-[50%]" alt="" />
   </div>
   </div>
-  <div class="lg:pt-[150px] lg:px-[350px] px-[100px]">
+  <div class="lg:pt-[150px] lg:px-[350px] sm:px-[100px] px-[20px]">
     <div class="flex flex-col item gap-[150px]">
       <div class="flex lg:flex-row flex-col lg:gap-[110px] justify-center items-center">
         <img class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px]" src="/ufo.jpeg" alt="" />
-        <div class="flex flex-col mt-[50px] lg:justify-center min-w-[510px]">
-          <h1 class="text-white text-[48px] mb-[30px]">Welcome to Nomad Labs</h1>
+        <div class="flex flex-col mt-[50px] lg:justify-center] w-full">
+          <h1 class="text-white sm:text-[48px] text-[30px] mb-[30px]">Welcome to Nomad Labs</h1>
           <svg
             width="160"
             height="12"
@@ -67,7 +67,7 @@
             />
           </svg>
           <div class="lg:mt-[35px]">
-            <p class="text-white description text-[18px]">
+            <p class="text-white description sm:text-[18px] text-[14px] max-w-[350px] sm:max-w-full">
               We are a forward-thinking Web-as-a-Service (WaaS) studio based in
               Asia, dedicated to pushing the boundaries of what's possible in the
               digital world. Our team of experts in design, development, and
@@ -80,7 +80,7 @@
   
       <div class="flex flex-col lg:flex-row lg:gap-[110px] justify-center wedo-container">
         <div class="flex flex-col justify-center min-w-[510px] wedo-desc">
-          <h1 class="text-white text-[48px] mb-[30px] mt-[50px] lg:mt-[0px]">What We Do</h1>
+          <h1 class="text-white sm:text-[48px] text-[30px] mb-[30px] mt-[50px] lg:mt-[0px]">What We Do</h1>
           <svg
             width="160"
             height="12"
@@ -94,18 +94,25 @@
             />
           </svg>
           <div class="lg:mt-[35px] flex flex-col gap-[10px]">
-            <p class="text-white description text-[18px]">
+            <p class="text-white description sm:text-[18px] text-[16px] max-w-[340px] sm:max-w-full">
               Are you looking to launch your next big project? Bring your website
               to the next level? Or explore new frontiers in Web3?
             </p>
-            <p class="text-white description text-[18px]">
+            <p class="text-white description sm:text-[18px] text-[16px] max-w-[340px] sm:max-w-full">
               We have the skills and expertise to make it happen.
             </p>
-            <p class="text-white description text-[18px]">
+            <p class="text-white description sm:text-[18px] text-[16px] max-w-[340px] sm:max-w-full">
               Our team of experts in design, development, and strategy are
               committed to delivering innovative solutions that meet your needs
               and exceed your expectations.
             </p>
+            <a href="/ourservices">
+              <div
+                class="border text-white h-[50px] w-[180px] flex justify-center items-center mt-[40px] button-hover"
+              >
+                Our Services
+              </div>
+            </a>
           </div>
         </div>
         <div class="wedo-img">
@@ -119,7 +126,7 @@
   
       <div class="flex justify-center">
         <div class="flex flex-col items-center gap-[25px]">
-          <h1 class="text-white text-[48px]">Why Choose Us?</h1>
+          <h1 class="text-white sm:text-[48px] text-[30px]">Why Choose Us?</h1>
           <svg
             width="141"
             height="9"
@@ -132,8 +139,8 @@
               fill="#666666"
             />
           </svg>
-          <div class="mt-[65px]">
-            <div class="lg:flex lg:gap-[70px] grid grid-cols-2 mb-[150px] gap-[60px]">
+          <div class="sm:mt-[65px] mt-[30px]">
+            <div class="lg:flex lg:gap-[70px] grid sm:grid-cols-2 grid-rows-4 grid-cols-1 mb-[150px] sm:gap-[60px] gap-[30px]">
               <div
                 class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] border-round px-[25px] lg:mb-[40px]"
               >
@@ -196,9 +203,8 @@
     text-align: justify;
   }
 
-  .title-description {
+  .desc {
     font-family: "Open Sans", sans-serif;
-    font-size: 18px;
   }
 
   .description-about-us {
