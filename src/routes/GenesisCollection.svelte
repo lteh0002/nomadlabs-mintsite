@@ -13,7 +13,7 @@
         </defs>
       </svg>
       <div class="mt-[40px] flex flex-col gap-[40px] lg:max-w-[800px] lg:w-[800px] sm:max-w-[620px] min-w-[320px]">
-        <p class="text-center text-[18px] genesis-description">Nomad Labs is a utility-based project that caters to the workforce of Web3, including project founders, developers, collab managers, artists, and more.</p>
+        <p class="text-center text-[18px] genesis-description">Space Nomads is a utility-based project from Nomad Labs that caters to the workforce of Web3, including project founders, developers, collab managers, artists, and more.</p>
         <p class="text-center text-[18px] genesis-description">Our goal is to act as a pillar within the space and bridge Web2 and Web3 by bringing mass commercial adoption that much sooner.</p>
         <p class="text-center text-[18px] genesis-description">We aim to be a one-stop-shop for all your Web3 needs, while also establishing a strong brand that allows us to deliver to the Web3 consumer.</p>
       </div>
