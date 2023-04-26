@@ -12,8 +12,9 @@
     <div class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title sm:px-[100px] px-[20px] flex-1 justify-center">
       <div>
         <div class="flex flex-1 flex-col justify-center text-white gap-[10px] lg:min-h-[50%]">
-          <h1 class="sm:text-[48px] text-[36px]">Mint</h1>
+          <h1 class="sm:text-[48px] text-[36px] mb-[12px]">Mint</h1>
           <svg
+            class="mb-[24px]"
             width="160"
             height="12"
             viewBox="0 0 160 12"

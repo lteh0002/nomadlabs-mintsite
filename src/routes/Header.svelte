@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { goto } from "$app/navigation";
-  import { navigation } from "./../utils/nav.js";
+  import { navigation, hideAccordionButton } from "./../utils/nav.js";
   let isPageTop = true;
   let isNavOpen = false;
 
@@ -9,8 +9,10 @@
     const overlay = document.getElementById("overlay");
     isNavOpen = !isNavOpen;
     if (isNavOpen == true) {
+      hideAccordionButton.hide()
       overlay.style.display = "block";
     } else if (isNavOpen == false) {
+      hideAccordionButton.default()
       overlay.style.display = "none";
     }
     closeOverlay();
@@ -83,7 +85,7 @@
     <ul class="text-white sm:mt-[100px] mt-[80px] sm:text-[48px] text-[30px] flex flex-col gap-[10px]">
       <li>
         <a
-          class={$navigation == "home" ? "text-[white]" : "text-[grey]"}
+          class='{$navigation == "home" ? "text-[white]" : "text-[grey]" } nav-selection'
           href="/"
           >Home <span class={$navigation == "home" ? "inline-block" : "hidden"}
             >•</span
@@ -92,7 +94,7 @@
       </li>
       <li>
         <a
-          class={$navigation == "about" ? "text-[white]" : "text-[grey]"}
+          class='{$navigation == "about" ? "text-[white]" : "text-[grey]"} nav-selection'
           href="/about"
           >About <span
             class={$navigation == "about" ? "inline-block" : "hidden"}>•</span
@@ -186,7 +188,7 @@
 
 <header
   id="nav"
-  class="h-[100px] flex items-center px-[20px] sm:px-[70px] z-50 sticky-nav justify-between lg:justify-around {isPageTop
+  class="h-[100px] flex items-center px-[25px] sm:px-[100px] z-50 sticky-nav justify-between lg:px-[19vw] {isPageTop
     ? ''
     : 'background'}"
 >
@@ -197,6 +199,7 @@
     class="max-w-[40px] max-h-[40px] cursor-pointer"
     src="NL-BW.png"
     alt="nomad-logo"
+    draggable="false"
   />
 
   <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -244,7 +247,7 @@
     width: 100%;
     background-color: #333;
     transition: all 0.5s ease-in-out;
-    z-index: 700;
+    z-index: 1000;
   }
 
   nav.open {
@@ -281,6 +284,14 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+  }
+
+  .nav-selection {
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-selection:hover {
+    color: #FFFFFF;
   }
 
   @media (min-width: 1024px) {

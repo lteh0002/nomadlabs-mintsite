@@ -1,5 +1,7 @@
 <script>
   import Item from "./Item.svelte";
+  import {hideAccordionButton} from "./../utils/nav.js";
+  
   const data = {
     "Phase 1 - Space Nomads Genesis Collection": [
       "888 supply",
@@ -28,9 +30,10 @@
         class="flex lg:flex-row flex-col lg:gap-[110px] justify-center min-h-[650px]"
       >
         <img
-          class="lg:w-[600px] lg:h-[600px] sm:h-[400px] sm:min-w-[620px] min-h-[450px] min--w-[350px] rounded-[50px]"
+          class="lg:w-[600px] lg:h-[600px] sm:h-[400px] sm:min-w-[620px] min-h-[450px] min-w-[350px] rounded-[50px]"
           src="/nomadspeech.png"
-          alt=""
+          alt="nomadspeech"
+          draggable="false"
         />
         <div class="flex flex-col min-w-[500px] max-h-[700px]">
           <h1 class="text-white sm:text-[48px] text-[30px] mb-[20px] mt-[45px] lg:mt-0">

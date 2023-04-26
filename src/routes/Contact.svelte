@@ -72,12 +72,7 @@
   }
 
   #contact {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(239, 239, 240, 0.194),
-        rgba(34, 21, 31, 0.73)
-      ),
-      url("/spaceman.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/spaceman.jpeg");
     background-position: center;
     background-size: cover;
   }
@@ -91,6 +86,7 @@
   }
 
   .button-hover:hover {
+    color: #bbbbbb;
     border-color: #bbbbbb;
   }
 

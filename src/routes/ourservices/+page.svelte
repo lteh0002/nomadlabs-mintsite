@@ -26,29 +26,6 @@
 
     indicatorActive[0].classList.add("indicator-size");
     btnContainer[0].classList.add("testing");
-
-    // const test = Array.from(document.getElementsByClassName('sc-carousel__pages-window'))
-    // const indicator = document.getElementsByClassName('sc-carousel-dot__dot')
-    // const pagesContainer = document.getElementsByClassName('sc-carousel__pages-container')
-    // console.log(pagesContainer[0])
-    // test[0].addEventListener('scroll', function() {
-    //   let scrollLeft = test[0].scrollLeft;
-    //   console.log('Horizontal scroll position:', scrollLeft);
-    //   let slideWidth = pagesContainer[0].offsetWidth
-    //   // console.log(pagesContainer[0].offsetWidth)
-    //   if (scrollLeft <= slideWidth/2 && scrollLeft > 0) {
-    //     indicator[0].classList.add('sc-carousel-dot__dot_active')
-    //     indicator[1].classList.remove('sc-carousel-dot__dot_active')
-    //     pagesContainer[0].style.transform = `translateX(` + (slideWidth - scrollLeft) + 'px)';
-    //     pagesContainer[0].style.transitionDuration = '500ms';
-    //     scrollLeft = 0
-    //   } else if (scrollLeft >= slideWidth/2) {
-    //     indicator[0].classList.remove('sc-carousel-dot__dot_active')
-    //     indicator[1].classList.add('sc-carousel-dot__dot_active')
-    //     pagesContainer[0].style.transform = `translateX(` + (slideWidth*-1 + scrollLeft) + 'px)'
-    //     pagesContainer[0].style.transitionDuration = '500ms';
-    //   }
-    // });
   });
 
   navigation.reset();
@@ -65,8 +42,9 @@
     >
       <div>
         <div class="flex flex-col sm:gap-[20px] gap-[15px] text-white">
-          <h1 class="lg:text-[48px] text-[36px]">Services</h1>
+          <h1 class="lg:text-[48px] text-[36px] mb-[12px]">Services</h1>
           <svg
+            class="mb-[24px]"
             width="160"
             height="12"
             viewBox="0 0 160 12"
@@ -89,7 +67,7 @@
               </clipPath>
             </defs>
           </svg>
-          <ul class="list-disc list-inside flex flex-col sm:gap-[10px] gap-[0px]">
+          <ul class="list-disc list-inside flex flex-col lg:gap-[24px] gap-[0px]">
             <li class="lg:text-[18px] sm:text-[16px] text-[12px] list">UI/UX Design</li>
             <li class="lg:text-[18px] sm:text-[16px] text-[12px] list">Web3 Solutions</li>
             <li class="lg:text-[18px] sm:text-[16px] text-[12px] list">Branding & Identity</li>
@@ -137,25 +115,25 @@
         arrows={true}
         dots={true}
         swiping={true}
-        infinite={false}
+        infinite={true}
         bind:this={carousel}
       >
         <div id="slide1" class="carousel-item relative w-full h-full">
           <div
-            class="flex flex-col sm:flex-row justify-around items-center border w-full lg:gap-[10px] rounded-2xl"
+            class="flex flex-col p-[10px] lg:p-[30px] lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl sm:mx-[0px] lg:mx-[50px] xl:mx-[200px]"
           >
             <div
-              class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
+              class="w-full lg:w-[50%]"
             >
               <img
                 src="/astronaut1.jpeg"
-                class="w-full lg:max-w-[500px] h-auto rounded-3xl"
+                class="w-full h-auto rounded-3xl"
                 alt="astronaut"
               />
             </div>
             <div class="w-full lg:w-[50%]">
               <div
-                class="text-white flex flex-col gap-[15px] px-[40px] lg:pr-[60px] mb-[20px]"
+                class="text-white flex flex-col gap-[15px] sm:px-[0px] pt-[20px] lg:ml-[30px] mb-[20px]"
               >
                 <h1 class="lg:text-[32px] sm:text-[28px] text-[24px]">
                   UI/UX Design
@@ -193,7 +171,7 @@
                   UI/UX experts will work with you to create an intuitive,
                   seamless experience for your users.
                 </p>
-                <a href="mailto:contact@nomadlabs.space"
+                <a class="sm:w-full lg:w-[180px] w-[160px] h-[50px]" href="mailto:contact@nomadlabs.space"
                   ><button
                     class="border sm:w-full lg:w-[180px] w-[160px] h-[50px] contact-btn"
                   >
@@ -206,7 +184,7 @@
         </div>
         <div id="slide2" class="carousel-item relative w-full h-full">
           <div
-            class="flex flex-col sm:flex-row justify-around items-center border w-full lg:gap-[10px] rounded-2xl"
+          class="flex flex-col lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl sm:mx-[0px] lg:mx-[100px] xl:mx-[200px]"
           >
             <div
               class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
@@ -253,7 +231,7 @@
                   </defs>
                 </svg>
                 <p class="lg:text-[18px] text-[12px] description">
-                  <span class="hidden sm:inline description"
+                  <span class="hidden sm:inline description lg:hidden xl:inline"
                     >Our team of developers has the skills and experience to
                     tackle any custom development project, from simple
                     applications to complex solutions.</span
@@ -261,7 +239,7 @@
                   We work closely with our clients to ensure that the final product
                   meets their needs and exceeds their expectations.
                 </p>
-                <a href="mailto:contact@nomadlabs.space"
+                <a class="sm:w-full lg:w-[180px] w-[160px] h-[50px]" href="mailto:contact@nomadlabs.space"
                   ><button
                     class="border sm:w-full lg:w-[180px] w-[160px] h-[50px] contact-btn"
                   >
@@ -274,7 +252,7 @@
         </div>
         <div id="slide3" class="carousel-item relative w-full h-full">
           <div
-            class="flex flex-col sm:flex-row justify-around items-center border w-full lg:gap-[10px] rounded-2xl"
+          class="flex flex-col lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl sm:mx-[0px] lg:mx-[100px] xl:mx-[200px]"
           >
             <div
               class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
@@ -321,14 +299,14 @@
                   </defs>
                 </svg>
                 <p class="lg:text-[18px] text-[12px] description">
-                  <span class="hidden sm:inline description"
+                  <span class="hidden sm:inline description lg:hidden xl:inline"
                     >A well-designed website can make all the difference.</span
                   >
                   Our team of experts will work with you to create a website that
                   not only looks great but is also user-friendly, fast, and optimized
                   for search engines.
                 </p>
-                <a href="mailto:contact@nomadlabs.space"
+                <a class="sm:w-full lg:w-[180px] w-[160px] h-[50px]" href="mailto:contact@nomadlabs.space"
                   ><button
                     class="border sm:w-full lg:w-[180px] w-[160px] h-[50px] contact-btn"
                   >
@@ -341,7 +319,7 @@
         </div>
         <div id="slide4" class="carousel-item relative w-full h-full">
           <div
-            class="flex flex-col sm:flex-row justify-around items-center border w-full lg:gap-[10px] rounded-2xl"
+          class="flex flex-col lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl sm:mx-[0px] lg:mx-[100px] xl:mx-[200px]"
           >
             <div
               class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
@@ -391,12 +369,12 @@
                   Our team of developers has the skills and experience to tackle
                   any custom development project, from simple applications to
                   complex solutions.
-                  <span class="hidden sm:inline description">
+                  <span class="hidden sm:inline description lg:hidden xl:inline">
                     We work closely with our clients to ensure that the final
                     product meets their needs and exceeds their expectations.</span
                   >
                 </p>
-                <a href="mailto:contact@nomadlabs.space"
+                <a class="sm:w-full lg:w-[180px] w-[160px] h-[50px]" href="mailto:contact@nomadlabs.space"
                   ><button
                     class="border sm:w-full lg:w-[180px] w-[160px] h-[50px] contact-btn"
                   >
@@ -409,7 +387,7 @@
         </div>
         <div id="slide5" class="carousel-item relative w-full h-full">
           <div
-            class="flex flex-col sm:flex-row justify-around items-center border w-full lg:gap-[10px] rounded-2xl"
+          class="flex flex-col lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl sm:mx-[0px] lg:mx-[100px] xl:mx-[200px]"
           >
             <div
               class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
@@ -456,7 +434,7 @@
                   </defs>
                 </svg>
                 <p class="lg:text-[18px] text-[12px] description">
-                  <span class="hidden sm:inline description"
+                  <span class="hidden sm:inline description lg:hidden xl:inline"
                     >Our team of developers has the skills and experience to
                     tackle any custom development project, from simple
                     applications to complex solutions.
@@ -464,7 +442,7 @@
                   We work closely with our clients to ensure that the final product
                   meets their needs and exceeds their expectations.
                 </p>
-                <a href="mailto:contact@nomadlabs.space"
+                <a class="sm:w-full lg:w-[180px] w-[160px] h-[50px]" href="mailto:contact@nomadlabs.space"
                   ><button
                     class="border sm:w-full lg:w-[180px] w-[160px] h-[50px] contact-btn"
                   >
@@ -500,6 +478,7 @@
   }
 
   .contact-btn:hover {
+    color: #bbbbbb;
     border-color: #bbbbbb;
   }
 

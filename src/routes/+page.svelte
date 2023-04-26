@@ -16,7 +16,7 @@
     <div id="landingpage" class="flex flex-col justify-between sticky">
       <Header />
       <div class="flex flex-col items-center justify-center flex-1 gap-[48px]">
-        <img class="w-[200px] h-[48px] sm:w-[362px] sm:h-[88px]" src="nl-fulllogo.png" alt="" />
+        <img class="w-[200px] h-[48px] sm:w-[362px] sm:h-[88px]" src="nl-fulllogo.png" alt="background" draggable="false" />
         <h1 id="desc" class="text-[30px] sm:text-[48px]">Navigating the Web 3 Universe</h1>
       </div>
 
@@ -57,7 +57,7 @@
   #landingpage {
     min-height: 100vh;
     height: 100%;
-    background-image: url("/background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("/background.jpg");
     background-position: center;
     background-size: cover;
   }

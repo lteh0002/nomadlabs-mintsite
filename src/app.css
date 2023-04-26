@@ -58,7 +58,7 @@ html, body {
 }
 
 .sc-carousel-arrow__circle {
-  margin: 0px 5px !important;
+  margin: 0px 20px !important;
   background-color: #111111 !important;
   font-size: 10px !important;
 }
@@ -69,4 +69,5 @@ html, body {
 
 .sc-carousel__pages-container {
   align-items: center;
+  padding: 0px;
 }

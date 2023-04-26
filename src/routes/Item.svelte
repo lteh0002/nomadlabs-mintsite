@@ -1,26 +1,37 @@
 <script>
   import { slide } from "svelte/transition";
+  import { hideAccordionButton } from "./../utils/nav.js";
   export let entry;
   let isOpen = false;
+  if (entry[0] === "Phase 1 - Space Nomads Genesis Collection") {
+    isOpen = true
+  } else {
+    isOpen = false;
+  }
+
   const toggle = () => (isOpen = !isOpen);
 </script>
 
-<button on:click={toggle} aria-expanded={isOpen}
-  ><svg
-    style="tran"
-    width="20"
-    height="20"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    stroke-width="2"
-    viewBox="0 0 24 24"
-    stroke="currentColor"><path d="M9 5l7 7-7 7" /></svg
-  >
+<button on:click={toggle} aria-expanded={isOpen} class="accordion">
+    <svg
+      class="toggleAccordion"
+      style="tran"
+      width="20"
+      height="20"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      stroke="currentColor"><path d="M9 5l7 7-7 7" /></svg
+    >
   {entry[0]}
 </button>
 {#if isOpen}
-  <ul class="list-disc list-inside sm:ml-[35px]" transition:slide={{ duration: 300 }}>
+  <ul
+    class="list-disc list-inside sm:ml-[35px]"
+    transition:slide={{ duration: 300 }}
+  >
     {#each entry[1] as item}
       <li class="roadmap-desc text-[14px] sm:text-[18px]">{item}</li>
     {/each}
@@ -48,16 +59,17 @@
 
   svg {
     transition: transform 0.2s ease-in;
+    z-index: 0;
     display: inline;
   }
 
   [aria-expanded="true"] svg {
+    z-index: 0;
     transform: rotate(0.25turn);
   }
+
 
   .roadmap-desc {
     font-family: "Open Sans", sans-serif;
   }
-
-  
 </style>

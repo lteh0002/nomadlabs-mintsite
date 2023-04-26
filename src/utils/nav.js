@@ -15,3 +15,14 @@ function setNav() {
 }
 
 export const navigation = setNav()
+
+function hideAccordion() {
+  const { subscribe, set } = writable(false)
+
+  return {
+    subscribe,
+    hide: () => set(false),
+    default: () => set(true)
+  }
+}
+export const hideAccordionButton = hideAccordion()

@@ -47,7 +47,8 @@
         <img
           class="lg:w-[600px] lg:h-[600px] sm:h-[400px] sm:min-w-[620px] min-h-[450px] min-w-[350px] rounded-[50px]"
           src="/walkietalkie.png"
-          alt=""
+          alt="walkietalkie"
+          draggable="false"
         />
       </div>
     </div>

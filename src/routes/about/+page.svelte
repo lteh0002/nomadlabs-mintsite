@@ -97,15 +97,14 @@
       <div
         class="flex flex-col lg:flex-row lg:gap-[110px] sm:items-center justify-center wedo-container"
       >
-        <div
-          class="flex flex-col min-w-[510px] wedo-desc"
-        >
+        <div class="flex flex-col min-w-[510px] wedo-desc">
           <h1
-            class="text-white sm:text-[48px] text-[30px] mb-[30px] mt-[50px] lg:mt-[0px]"
+            class="text-white sm:text-[48px] text-[30px] mb-[12px] mt-[50px] lg:mt-[0px]"
           >
             What We Do
           </h1>
           <svg
+            class="mb-[24px]"
             width="160"
             height="12"
             viewBox="0 0 160 12"
@@ -117,7 +116,7 @@
               fill="#666666"
             />
           </svg>
-          <div class="lg:mt-[35px] flex flex-col gap-[10px]">
+          <div class="flex flex-col gap-[24px]">
             <p
               class="text-white description sm:text-[18px] text-[16px] max-w-[340px] sm:max-w-full"
             >
@@ -138,7 +137,7 @@
             </p>
             <a href="/ourservices">
               <div
-                class="border text-white h-[50px] w-[180px] flex justify-center items-center mt-[40px] button-hover"
+                class="border text-white h-[50px] w-[180px] flex justify-center items-center mt-[36px] button-hover"
               >
                 Our Services
               </div>
@@ -264,6 +263,15 @@
     max-width: 100%;
     max-height: 100vh;
     object-fit: cover;
+  }
+
+  .button-hover:hover {
+    transition: 0.3s ease-in-out;
+  }
+
+  .button-hover:hover {
+    color: #bbbbbb;
+    border-color: #bbbbbb;
   }
 
   @media (max-width: 1024px) {
