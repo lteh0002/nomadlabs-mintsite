@@ -82,7 +82,7 @@
           </svg>
           <div class="lg:mt-[35px]">
             <p
-              class="text-white description sm:text-[18px] text-[14px] max-w-[350px] sm:max-w-full"
+              class="text-white desc sm:text-[18px] text-[14px] max-w-[350px] sm:max-w-full"
             >
               We are a forward-thinking Web-as-a-Service (WaaS) studio based in
               Asia, dedicated to pushing the boundaries of what's possible in
@@ -104,7 +104,7 @@
             What We Do
           </h1>
           <svg
-            class="mb-[24px]"
+            class="my-[12px]"
             width="160"
             height="12"
             viewBox="0 0 160 12"
@@ -116,7 +116,7 @@
               fill="#666666"
             />
           </svg>
-          <div class="flex flex-col gap-[24px]">
+          <div class="flex flex-col">
             <p
               class="text-white description sm:text-[18px] text-[16px] max-w-[340px] sm:max-w-full"
             >
@@ -135,9 +135,9 @@
               committed to delivering innovative solutions that meet your needs
               and exceed your expectations.
             </p>
-            <a href="/ourservices">
+            <a class="mt-[36px]" href="/ourservices">
               <div
-                class="border text-white h-[50px] w-[180px] flex justify-center items-center mt-[36px] button-hover"
+                class="border text-white h-[50px] w-[180px] flex justify-center items-center button-hover"
               >
                 Our Services
               </div>
@@ -230,13 +230,15 @@
 
   .description {
     font-family: "Open Sans", sans-serif;
-    padding-top: 35px;
+    padding-top: 24px;
     text-align: justify;
   }
 
   .desc {
     font-family: "Open Sans", sans-serif;
   }
+
+  
 
   .description-about-us {
     font-size: 14px;
