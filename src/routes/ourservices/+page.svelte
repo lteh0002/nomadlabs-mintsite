@@ -1,10 +1,14 @@
 <script>
   import { onMount } from "svelte";
+  import { onDestroy } from 'svelte';
+  import {updateBtnContainerStyles} from './../../utils/screen'
   import { navigation } from "./../../utils/nav.js";
   import Carousel from "svelte-carousel";
   import { browser } from "$app/environment";
-
+  import NormalHeader from "../NormalHeader.svelte";
+  import Contact from "../Contact.svelte";
   let carousel; // for calling methods of the carousel instance
+  let btnContainer
 
   function goToNextPage() {
     carousel.goToNext();
@@ -14,18 +18,19 @@
     carousel.goToPrev();
   }
 
-  import NormalHeader from "../NormalHeader.svelte";
-  import Contact from "../Contact.svelte";
+
+
   onMount(async () => {
     const indicatorActive = Array.from(
       document.getElementsByClassName("sc-carousel-dot__dot_active")
     );
-    const btnContainer = Array.from(
+    const indicatorContainer = Array.from(
       document.getElementsByClassName("sc-carousel-dots__container")
     );
-
+    btnContainer = Array.from(document.getElementsByClassName("sc-carousel__arrow-container"))
+    updateBtnContainerStyles();
     indicatorActive[0].classList.add("indicator-size");
-    btnContainer[0].classList.add("testing");
+    indicatorContainer[0].classList.add("testing");
   });
 
   navigation.reset();
@@ -120,7 +125,7 @@
       >
         <div id="slide1" class="carousel-item relative w-full h-full">
           <div
-            class="flex flex-col p-[10px] lg:p-[30px] lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl sm:mx-[0px] lg:mx-[50px] xl:mx-[200px]"
+            class="flex flex-col p-[10px] sm:p-[30px] lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl"
           >
             <div
               class="w-full lg:w-[50%]"
@@ -184,20 +189,20 @@
         </div>
         <div id="slide2" class="carousel-item relative w-full h-full">
           <div
-          class="flex flex-col lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl sm:mx-[0px] lg:mx-[100px] xl:mx-[200px]"
+            class="flex flex-col p-[10px] sm:p-[30px] lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl"
           >
             <div
-              class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
+              class="w-full lg:w-[50%]"
             >
               <img
                 src="/astronaut2.jpeg"
-                class="w-full lg:max-w-[500px] h-auto rounded-3xl"
+                class="w-full h-auto rounded-3xl"
                 alt="astronaut"
               />
             </div>
             <div class="w-full lg:w-[50%]">
               <div
-                class="text-white flex flex-col gap-[15px] px-[40px] lg:pr-[60px] mb-[20px]"
+                class="text-white flex flex-col gap-[15px] sm:px-[0px] pt-[20px] lg:ml-[30px] mb-[20px]"
               >
                 <h1 class="lg:text-[32px] sm:text-[28px] text-[24px]">
                   Custom Development
@@ -252,20 +257,20 @@
         </div>
         <div id="slide3" class="carousel-item relative w-full h-full">
           <div
-          class="flex flex-col lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl sm:mx-[0px] lg:mx-[100px] xl:mx-[200px]"
+            class="flex flex-col p-[10px] sm:p-[30px] lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl"
           >
             <div
-              class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
+              class="w-full lg:w-[50%]"
             >
               <img
                 src="/astronaut3.jpeg"
-                class="w-full lg:max-w-[500px] h-auto rounded-3xl"
+                class="w-full h-auto rounded-3xl"
                 alt="astronaut"
               />
             </div>
             <div class="w-full lg:w-[50%]">
               <div
-                class="text-white flex flex-col gap-[15px] px-[40px] lg:pr-[60px] mb-[20px]"
+                class="text-white flex flex-col gap-[15px] sm:px-[0px] pt-[20px] lg:ml-[30px] mb-[20px]"
               >
                 <h1 class="lg:text-[32px] sm:text-[28px] text-[24px]">
                   Website Design & Development
@@ -319,20 +324,20 @@
         </div>
         <div id="slide4" class="carousel-item relative w-full h-full">
           <div
-          class="flex flex-col lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl sm:mx-[0px] lg:mx-[100px] xl:mx-[200px]"
+            class="flex flex-col p-[10px] sm:p-[30px] lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl"
           >
             <div
-              class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
+              class="w-full lg:w-[50%]"
             >
               <img
                 src="/astronaut4.jpeg"
-                class="w-full lg:max-w-[500px] h-auto rounded-3xl"
+                class="w-full h-auto rounded-3xl"
                 alt="astronaut"
               />
             </div>
             <div class="w-full lg:w-[50%]">
               <div
-                class="text-white flex flex-col gap-[15px] px-[40px] lg:pr-[60px] mb-[20px]"
+                class="text-white flex flex-col gap-[15px] sm:px-[0px] pt-[20px] lg:ml-[30px] mb-[20px]"
               >
                 <h1 class="lg:text-[32px] sm:text-[28px] text-[24px]">
                   Custom Development
@@ -387,20 +392,20 @@
         </div>
         <div id="slide5" class="carousel-item relative w-full h-full">
           <div
-          class="flex flex-col lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl sm:mx-[0px] lg:mx-[100px] xl:mx-[200px]"
+            class="flex flex-col p-[10px] sm:p-[30px] lg:flex-row justify-around sm:justify-center items-center border w-full lg:gap-[10px] rounded-2xl"
           >
             <div
-              class="w-full lg:w-[50%] px-[30px] py-[10px] lg:px-[70px] lg:py-[40px]"
+              class="w-full lg:w-[50%]"
             >
               <img
                 src="/astronaut5.jpeg"
-                class="w-full lg:max-w-[500px] h-auto rounded-3xl"
+                class="w-full h-auto rounded-3xl"
                 alt="astronaut"
               />
             </div>
             <div class="w-full lg:w-[50%]">
               <div
-                class="text-white flex flex-col gap-[15px] px-[40px] lg:pr-[60px] mb-[20px]"
+                class="text-white flex flex-col gap-[15px] sm:px-[0px] pt-[20px] lg:ml-[30px] mb-[20px]"
               >
                 <h1 class="lg:text-[32px] sm:text-[28px] text-[24px]">
                   Web3 Solutions

@@ -50,6 +50,12 @@ html, body {
   border-width: 0 var(--sc-arrow-size) var(--sc-arrow-size) 0 !important;
 }
 
+@media (max-width: 767px) {
+  .sc-carousel__arrow-container{
+    width: 40px !important;
+  }
+}
+
 .sc-carousel-button {
   /* margin: 0 30px !important; */
   border: none !important;

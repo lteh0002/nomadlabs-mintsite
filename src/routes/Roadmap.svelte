@@ -1,6 +1,5 @@
 <script>
   import Item from "./Item.svelte";
-  import {hideAccordionButton} from "./../utils/nav.js";
   
   const data = {
     "Phase 1 - Space Nomads Genesis Collection": [

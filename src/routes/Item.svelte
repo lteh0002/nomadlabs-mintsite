@@ -14,7 +14,7 @@
 
 <button on:click={toggle} aria-expanded={isOpen} class="accordion">
     <svg
-      class="toggleAccordion"
+      class='{!$hideAccordionButton ? "" : "toggleAccordion"} inline rotateButton'
       style="tran"
       width="20"
       height="20"
@@ -57,13 +57,13 @@
     }
   }
 
-  svg {
+  .rotateButton {
     transition: transform 0.2s ease-in;
     z-index: 0;
     display: inline;
   }
 
-  [aria-expanded="true"] svg {
+  .toggleAccordion {
     z-index: 0;
     transform: rotate(0.25turn);
   }
