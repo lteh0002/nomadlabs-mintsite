@@ -55,9 +55,7 @@
   </div>
   <div class="lg:pt-[150px] lg:px-[350px] sm:px-[100px] px-[20px]">
     <div class="flex flex-col item gap-[150px]">
-      <div
-        class="flex lg:flex-row flex-col lg:gap-[110px] justify-center items-center"
-      >
+      <div class="flex lg:flex-row flex-col lg:gap-[110px] justify-center items-center">
         <img
           class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px]"
           src="/ufo.jpeg"
@@ -82,7 +80,7 @@
           </svg>
           <div class="">
             <p
-              class="text-white desc sm:text-[18px] text-[14px] text-justify sm:max-w-full"
+              class="text-white desc sm:text-[18px] text-[14px] text-justify max-w-[350px] sm:max-w-full"
             >
               We are a forward-thinking Web-as-a-Service (WaaS) studio based in
               Asia, dedicated to pushing the boundaries of what's possible in
@@ -94,9 +92,7 @@
         </div>
       </div>
 
-      <div
-        class="flex flex-col lg:flex-row lg:gap-[110px] sm:items-center justify-center wedo-container"
-      >
+      <div class="flex flex-col lg:flex-row lg:gap-[110px] sm:items-center justify-center wedo-container">
         <div class="flex flex-col sm:min-w-[510px] wedo-desc">
           <h1
             class="text-white sm:text-[48px] text-[30px] mb-[12px] mt-[50px] lg:mt-[0px]"
@@ -182,7 +178,7 @@
                 </p>
               </div>
               <div
-                class="text-white sm:min-w-[250px] sm:w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] lg:pt-[40px] m-[auto] border-round px-[25px]"
+                class="text-white sm:min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] lg:pt-[40px] m-[auto] border-round px-[25px]"
               >
                 <h1 class="text-[24px]">02 - Innovative</h1>
                 <p class="description-about-us">
