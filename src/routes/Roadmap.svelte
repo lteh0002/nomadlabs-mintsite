@@ -29,6 +29,7 @@
         class="flex lg:flex-row flex-col lg:gap-[110px] justify-center min-h-[650px]"
       >
         <img
+          loading="lazy"
           class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px] m-auto"
           src="/nomadspeech.png"
           alt="nomadspeech"

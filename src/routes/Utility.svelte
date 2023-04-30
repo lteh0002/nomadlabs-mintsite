@@ -55,7 +55,7 @@
   </div>
 </div>
 
-<style>
+<!-- <style>
   * {
     color: white;
     background-color: #111111;
@@ -106,4 +106,6 @@
     order: 1;lg:w-[600px] lg:h-[600px] sm:h-[400px] sm:min-w-[620px] min-h-[450px] min--w-[350px] rounded-[50px]
   } */
   }
-</style>
+</style> -->
+
+<style>*{color:#fff;background-color:#111}.utility-desc{font-family:"Open Sans",sans-serif;font-size:18px}@media (max-width:640px){.utility-desc{font-size:14px}}@media (max-width:1024px){.container{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-moz-box-align:start;-ms-flex-align:start}.container .first_div{-webkit-box-ordinal-group:2;-moz-box-ordinal-group:2;-ms-flex-order:2;-webkit-order:2;order:2}}</style>
