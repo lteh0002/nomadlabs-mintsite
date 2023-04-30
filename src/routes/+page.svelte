@@ -13,7 +13,7 @@
 
 <div>
   <div>
-    <div id="landingpage" class="flex flex-col justify-between sticky">
+    <div id="landingpage" class="flex flex-col justify-between sticky z-50">
       <Header />
       <div class="flex flex-col items-center justify-center flex-1 gap-[48px]">
         <img class="w-[200px] h-[48px] sm:w-[362px] sm:h-[88px]" src="nl-fulllogo.png" alt="background" draggable="false" />
@@ -46,7 +46,7 @@
       </div>
     </div>
     <GenesisCollection />
-    <Roadmap />
+    <Roadmap class="z-10" />
     <Utility />
     <Explore />
     <Contact />

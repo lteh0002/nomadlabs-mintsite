@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { goto } from "$app/navigation";
-  import { navigation, hideAccordionButton } from "./../utils/nav.js";
+  import { navigation } from "./../utils/nav.js";
   let isPageTop = true;
   let isNavOpen = false;
 
@@ -9,10 +9,10 @@
     const overlay = document.getElementById("overlay");
     isNavOpen = !isNavOpen;
     if (isNavOpen == true) {
-      hideAccordionButton.hide()
+      // hideAccordionButton.hide()
       overlay.style.display = "block";
     } else if (isNavOpen == false) {
-      hideAccordionButton.default()
+      // hideAccordionButton.default()
       overlay.style.display = "none";
     }
     closeOverlay();
@@ -60,25 +60,24 @@
 <nav class='{isNavOpen ? "open" : ""} relative'>
   <div class="absolute top-[30px] sm:right-[70px] right-[30px] inline">
     <div
-    id="sidebar"
-    on:click={toggleNav}
-    class="flex items-center justify-end gap-[16px] text-white cursor-pointer"
-  >
-    <h1 id="menu">CLOSE</h1>
-    <svg
-      width="30"
-      height="30"
-      viewBox="0 0 30 30"
-      fill="white"
-      xmlns="http://www.w3.org/2000/svg"
+      id="sidebar"
+      on:click={toggleNav}
+      class="flex items-center justify-end gap-[16px] text-white cursor-pointer"
     >
-      <path
-        d="M1.1749 0.0249939L0.0249023 1.17499L13.8499 15L0.0249023 28.825L1.1749 29.975L14.9999 16.15L28.8249 29.975L29.9749 28.825L16.1499 15L29.9749 1.17499L28.8249 0.0249939L14.9999 13.85L1.1749 0.0249939Z"
-        fill="#BBBBBB"
-      />
-    </svg>
-  </div>
-
+      <h1 id="menu">CLOSE</h1>
+      <svg
+        width="30"
+        height="30"
+        viewBox="0 0 30 30"
+        fill="white"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.1749 0.0249939L0.0249023 1.17499L13.8499 15L0.0249023 28.825L1.1749 29.975L14.9999 16.15L28.8249 29.975L29.9749 28.825L16.1499 15L29.9749 1.17499L28.8249 0.0249939L14.9999 13.85L1.1749 0.0249939Z"
+          fill="#BBBBBB"
+        />
+      </svg>
+    </div>
   </div>
 
   <div class="sm:pl-[60px] pl-[30px]">
@@ -255,6 +254,7 @@
 
   nav.open {
     right: 0;
+    z-index: 100;
   }
 
   .sticky-nav {
