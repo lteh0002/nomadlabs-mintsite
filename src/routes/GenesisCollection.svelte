@@ -21,9 +21,9 @@
       <div class="mt-[40px] flex flex-col items-center">
         <h1 class="asset-title sm:text-[18px] text-[14px]">Discover the Genesis Collection</h1>
         <div class="lg:grid lg:grid-cols-3 lg:gap-[80px] lg:min-w-[1210px] mt-[45px] flex flex-col justify-center gap-[40px]">
-          <img class="max-w-[350px] max-h-[450px]" src="/nft3.jpeg" alt="">
-          <img class="max-w-[350px] max-h-[450px]" src="/nft3.jpeg" alt="">
-          <img class="max-w-[350px] max-h-[450px]" src="/nft3.jpeg" alt="">
+          <img class="max-w-[350px] max-h-[450px]" src="/nomadnft1.png" alt="nft1">
+          <img class="max-w-[350px] max-h-[450px]" src="/nomadnft2.png" alt="nft2">
+          <img class="max-w-[350px] max-h-[450px]" src="/nomadnft3.jpeg" alt="nft3">
         </div>
       </div>
     </div>
