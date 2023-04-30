@@ -1,6 +1,6 @@
 <script>
   import Item from "./Item.svelte";
-  
+
   const data = {
     "Phase 1 - Space Nomads Genesis Collection": [
       "888 supply",
@@ -35,12 +35,13 @@
           draggable="false"
         />
         <div class="flex flex-col min-w-[500px] max-h-[700px]">
-          <h1 class="text-white sm:text-[48px] text-[30px] mb-[20px] mt-[45px] lg:mt-0">
+          <h1
+            class="text-white sm:text-[48px] text-[30px] mb-[20px] mt-[45px] lg:mt-0"
+          >
             Roadmap
           </h1>
           <svg
-            width="261"
-            height="12"
+            class="sm:w-[261px] sm:h-[12px] w-[112px] h-[12px]"
             viewBox="0 0 261 12"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +68,9 @@
             </defs>
           </svg>
 
-          <div class="lg:mt-[15px] mt-[20px] whitespace-normal max-w-[350px] sm:max-w-full">
+          <div
+            class="lg:mt-[15px] mt-[20px] whitespace-normal max-w-[350px] sm:max-w-full"
+          >
             {#each Object.entries(data) as entry}
               <Item {entry} />
             {/each}
