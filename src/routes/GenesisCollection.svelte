@@ -20,7 +20,7 @@
 
       <div class="mt-[40px] flex flex-col items-center">
         <h1 class="asset-title sm:text-[18px] text-[14px]">Discover the Genesis Collection</h1>
-        <div class="lg:grid lg:grid-cols-3 lg:gap-[80px] lg:min-w-[1210px] mt-[45px] flex flex-col justify-center items-center gap-[40px] nft-row">
+        <div class="lg:grid lg:grid-cols-3 lg:min-w-[1210px] mt-[45px] flex flex-col justify-center items-center gap-[40px] nft-row">
           <img class="max-w-[350px] max-h-[450px]" src="/nomadnft1.png" alt="nft1">
           <img class="max-w-[350px] max-h-[450px]" src="/nomadnft2.png" alt="nft2">
           <img class="max-w-[350px] max-h-[450px]" src="/nomadnft3.jpeg" alt="nft3">
@@ -45,10 +45,19 @@
     font-weight: bold;
   }
 
-  /* @media (max-height: 820px) and (max-height: 1180px) {
-    img {
-      display: flex !important;
-      flex-direction: column !important;
+  @media (width: 1180px) and (height: 820px) {
+    .nft-row {
+      min-width: 1100px !important;
     }
-  } */
+  }
+
+  @media (width: 1024px) and (height: 768px) {
+    .nft-row {
+      min-width: 950px !important;
+    }
+
+    img {
+      max-width: 300px;
+    }
+  }
 </style>

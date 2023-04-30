@@ -29,7 +29,7 @@
       </defs>
     </svg>
     <div
-      class="text-white sm:w-[770px] w-[350px] text-[18px] flex flex-col items-center gap-[30px]"
+      class="text-white c-desc sm:w-[770px] w-[350px] text-[18px] flex flex-col items-center gap-[30px]"
     >
       <p class="description pt-[30px] text-center text-[14px] sm:text-[18px]">
         At Nomad Labs, we're passionate about delivering innovative solutions
@@ -49,13 +49,25 @@
       </p>
     </div>
 
+    {#if $navigation === 'home'}
+      <a href="/about">
+        <div
+          class="border text-white h-[50px] w-[180px] flex justify-center items-center mt-[40px] button-hover"
+        >
+          About Us
+        </div>
+      </a>
+    {:else if $navigation === 'about'}
     <a href="mailto:contact@nomadlabs.space">
       <div
-        class="border text-white h-[50px] w-[180px] flex justify-center items-center mt-[40px] button-hover"
-      >
-        Get In Touch
+            class="border text-white h-[50px] w-[180px] flex justify-center items-center mt-[40px] button-hover"
+          >
+            Get In Touch
       </div>
     </a>
+    {/if}
+
+   
   </div>
 </div>
 
@@ -94,5 +106,16 @@
     .text-holder {
       max-width: 660px;
     }
+  }
+
+  @media (max-height: 428px) {
+    .c-desc {
+      width: 600px;
+    }
+
+    #contact {
+    min-height: 400px;
+    /* height: 500px; */
+  }
   }
 </style>

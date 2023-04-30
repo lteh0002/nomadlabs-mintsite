@@ -1,8 +1,8 @@
 <div class="bg-[#111111] min-w-[100vw] min-h-[600px] pt-[150px] pb-[150px]">
-  <div class="lg:px-[350px] sm:px-[100px] px-[20px]">
+  <div class="lg:px-[350px] sm:px-[100px] px-[20px] c-container">
     <div class="flex flex-col item gap-[150px]">
-      <div class="flex lg:flex-row flex-col lg:gap-[110px] justify-center container">
-        <div class="flex flex-col lg:justify-center min-w-[500px] first_div mt-[50px] lg:mt-[0px]">
+      <div class="flex lg:flex-row flex-col justify-center container">
+        <div class="flex flex-col lg:justify-center min-w-[500px] first_div mt-[50px] lg:mt-[0px] m-auto">
           <h1 class="text-white sm:text-[48px] text-[30px] mb-[20px]">Utility</h1>
           <svg class="sm:w-[261px] sm:h-[12px] w-[112px] h-[12px]" viewBox="0 0 261 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_166_71)">
@@ -14,7 +14,7 @@
             <rect width="259.17" height="11.0203" fill="white" transform="translate(0.871338 0.316772)"/>
             </clipPath>
             </defs>
-            </svg>
+          </svg>
             <div class="mt-[30px]">
               <ul class="list-decimal list-inside flex flex-col gap-[10px] max-w-[350px] sm:max-w-full">
                 <li class="utility-desc">Benefits throughout the launchpad</li>
@@ -46,8 +46,8 @@
         </div>
         <img
             class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px] m-auto"
-            src="/walkietalkie.png"
-            alt="walkietalkie"
+            src="/spacesuit.png"
+            alt="spacesuit"
             draggable="false"
           />
       </div>
@@ -55,7 +55,7 @@
   </div>
 </div>
 
-<!-- <style>
+<style>
   * {
     color: white;
     background-color: #111111;
@@ -97,15 +97,24 @@
     -webkit-order: 2;
     order: 2;
   }
-/* 
-  .container .second_div {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -ms-flex-order: 1;
-    -webkit-order: 1;
-    order: 1;lg:w-[600px] lg:h-[600px] sm:h-[400px] sm:min-w-[620px] min-h-[450px] min--w-[350px] rounded-[50px]
-  } */
   }
-</style> -->
 
-<style>*{color:#fff;background-color:#111}.utility-desc{font-family:"Open Sans",sans-serif;font-size:18px}@media (max-width:640px){.utility-desc{font-size:14px}}@media (max-width:1024px){.container{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-moz-box-align:start;-ms-flex-align:start}.container .first_div{-webkit-box-ordinal-group:2;-moz-box-ordinal-group:2;-ms-flex-order:2;-webkit-order:2;order:2}}</style>
+  @media (width: 1024px) and (height: 768px) {
+    .c-container {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  @media (width: 1180px) and (height: 820px) {
+    .container {
+      gap: 20px !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      gap: 110px;
+    }
+  }
+</style>

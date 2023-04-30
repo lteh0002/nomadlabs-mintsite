@@ -58,7 +58,7 @@
 <div on:click={closeOverlay} id="overlay" />
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <nav class='{isNavOpen ? "open" : ""} relative'>
-  <div class="absolute top-[30px] sm:right-[70px] right-[30px] inline">
+  <div class="absolute top-[30px] sm:right-[70px] right-[30px] inline c-close">
     <div
       id="sidebar"
       on:click={toggleNav}
@@ -66,6 +66,7 @@
     >
       <h1 id="menu">CLOSE</h1>
       <svg
+        class="close"
         width="30"
         height="30"
         viewBox="0 0 30 30"
@@ -81,7 +82,7 @@
   </div>
 
   <div class="sm:pl-[60px] pl-[30px]">
-    <ul class="text-white sm:mt-[100px] mt-[80px] sm:text-[48px] text-[30px] flex flex-col gap-[10px]">
+    <ul class="text-white sm:mt-[100px] mt-[80px] flex flex-col gap-[10px] nav-option">
       <li>
         <a
           class='{$navigation == "home" ? "text-[white]" : "text-[grey]"} nav-selection'
@@ -130,7 +131,7 @@
     </ul>
   </div>
 
-  <div class="flex flex-col sm:flex-row gap-[20px] sm:gap-[30px] sm:ml-[60px] ml-[30px] absolute bottom-[120px] sm:bottom-[150px]">
+  <div class="flex flex-col sm:flex-row gap-[20px] sm:gap-[30px] sm:ml-[60px] ml-[30px] absolute bottom-[120px] sm:bottom-[150px] c-social">
     <a href="https://discord.com/invite/PQqmXUYYfD" target="_blank">
       <div class="flex justify-center gap-[20px] items-center border min-w-[180px] min-h-[50px] h-[50px] social-button">
         <svg width="28" height="21" viewBox="0 0 28 21" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -157,7 +158,7 @@
 
   <div class="footer-container gap-[15px] flex flex-col justify-center sm:flex-row text-[#BBBBBB] min-h-[100px] items-center px-[70px] sm:justify-between sm:gap-[0px] absolute bottom-0">
     <div class="first_div">
-      <p class="text-[16px] min-w-[320px]">Copyright © 2023 Nomad Labs. All Rights Reserved.</p>
+      <p class="text-[16px] min-w-[320px] copyright">Copyright © 2023 Nomad Labs. All Rights Reserved.</p>
     </div>
     <div class="flex gap-[25px] second_div">
       <svg class="nav-socials" width="20" height="20" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -240,6 +241,23 @@
     cursor: pointer;
   }
 
+  @media (width: 1180px) and (height: 820px) {
+    .footer-container {
+      justify-content: space-around;
+
+    }
+  }
+
+  @media (width: 1024px) and (height: 768px) {
+    .footer-container {
+      justify-content: space-around;
+    }
+    
+    .second_div{
+      gap: 10px;
+    }
+  }
+
 
   nav {
     position: fixed;
@@ -314,6 +332,51 @@
     color: #FFFFFF;
   }
 
+  .nav-option {
+    font-size: 30px;
+  }
+
+  @media (min-width: 640px) {
+    .nav-option {
+      font-size: 48px;
+    }
+  }
+
+  @media (max-height: 428px) {
+    #nav {
+      height: 70px;
+    }
+
+    .nav-option {
+      margin-top: 50px;
+      font-size: 20px !important;
+    }
+
+    #menu {
+      font-size: 15px;
+    }
+
+    .c-close {
+      top: 15px;
+    }
+
+    .close {
+      width: 20px;
+    }
+
+    .footer-container {
+      min-height: 50px;
+    }
+
+    .c-social {
+      bottom: 65px;
+    }
+
+    /* .social-button {
+      width: 50px;
+    } */
+  }
+
   @media (min-width: 1024px) {
     nav {
       right: -50%;
@@ -354,5 +417,6 @@
     -webkit-order: 1;
     order: 1;
   } 
+
 }
 </style>

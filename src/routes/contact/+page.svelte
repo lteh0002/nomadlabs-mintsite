@@ -8,9 +8,9 @@
 <NormalHeader />
 <div class="flex min-h-screen items-center bg-[#111111] min-w-[100vw]">
   <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center bg-[#111111] min-w-[100vw] min-h-screen landing-container">
-    <div class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title sm:px-[100px] px-[20px] flex-1 justify-center">
+    <div class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title sm:px-[100px] px-[20px] flex-1 justify-center c-title">
       <div>
-        <div class="flex flex-1 flex-col justify-center text-white gap-[10px] lg:min-h-[50%]">
+        <div class="flex flex-1 flex-col justify-center text-white gap-[10px] lg:min-h-[50%] c-desc">
           <h1 class="sm:text-[48px] text-[36px] mb-[12px]">Talk to Us</h1>
           <svg
             class="mb-[24px]"
@@ -117,5 +117,32 @@
   .landing-img {
     max-height: 50vh;
   }
+
+  @media (max-height: 428px) {
+      .landing-img {
+        margin-top: 70px;
+        margin-bottom: 50px;
+      }
+
+      .landing-container {
+        padding-bottom: 50px;
+      }
+    }
 }
+
+@media (width: 1024px) and (height: 768px) {
+    .c-title {
+      justify-content: unset;
+    }
+
+   .landing-img img {
+    padding-top: 100px;
+    max-height: none !important;
+    min-width: 100vh !important;
+   }
+
+   .c-desc {
+    margin-top: 50px;
+   }
+  }
 </style>

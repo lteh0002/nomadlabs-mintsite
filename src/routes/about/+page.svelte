@@ -12,11 +12,11 @@
     class="flex flex-col lg:flex-row lg:justify-between lg:items-center bg-[#111111] min-w-[100vw] min-h-screen landing-container"
   >
     <div
-      class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title sm:px-[100px] px-[20px] flex-1 justify-center"
+      class="flex flex-col lg:min-w-[50%] lg:items-stretch lg:flex-row lg:min-h-[50%] min-h-full w-full landing-title sm:px-[100px] px-[20px] flex-1 justify-center c-title"
     >
       <div>
         <div
-          class="flex flex-1 flex-col justify-center text-white lg:min-h-[50%]"
+          class="flex flex-1 flex-col justify-center text-white lg:min-h-[50%] c-container"
         >
           <h1 class="sm:text-[48px] text-[36px] mb-[24px]">About Us</h1>
           <svg
@@ -53,21 +53,21 @@
       <img src="/spaceship.jpeg" class="min-w-full lg:min-w-[50%]" alt="" />
     </div>
   </div>
-  <div class="lg:pt-[150px] lg:px-[350px] sm:px-[100px] px-[20px]">
-    <div class="flex flex-col item gap-[150px]">
-      <div class="flex lg:flex-row flex-col lg:gap-[110px] justify-center items-center">
-        <img
-          class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px]"
-          src="/ufo.jpeg"
-          alt=""
-        />
-        <div
-          class="flex flex-col mt-[50px] lg:justify-center w-full sm:min-w-[510px]"
-        >
-          <h1 class="text-white sm:text-[48px] text-[30px] mb-[30px]">
+  <div class="lg:pt-[150px] lg:px-[350px] sm:px-[100px] px-[20px] mt-[50px]">
+    <div class="flex flex-col c-wedo-container">
+      <div class="flex flex-col lg:flex-row sm:items-center justify-center wedo-container">
+        <div class="wedo-img">
+          <img
+            class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px]"
+            src="ufo.jpeg"
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col sm:min-w-[510px] wedo-desc">
+          <h1 class="text-white sm:text-[48px] text-[30px] mb-[12px] mt-[50px] lg:mt-[0px]">
             Welcome to Nomad Labs
           </h1>
-          <svg class="sm:w-[261px] sm:h-[12px] w-[112px] h-[12px] mb-[24px]" viewBox="0 0 261 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="sm:w-[261px] sm:h-[12px] w-[112px] h-[12px] my-[12px]" viewBox="0 0 261 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_166_71)">
             <path d="M260.042 4.75843V6.85355H52.3211C52.0069 7.47161 51.434 7.90111 50.7687 7.90111C50.1034 7.90111 49.5121 7.49257 49.1979 6.85355H30.4402C30.163 8.06872 29.4238 8.94868 28.5922 8.94868C27.7606 8.94868 27.0029 8.08968 26.7441 6.85355H9.13224C8.76263 9.37818 7.0809 11.2952 5.04805 11.2952C3.0152 11.2952 1.33348 9.42008 0.963867 6.89546V4.80033C1.33348 2.23381 3.0152 0.316772 5.04805 0.316772C7.0809 0.316772 8.74415 2.23381 9.13224 4.75843H26.7441C27.0213 3.54326 27.7606 2.66331 28.5922 2.66331C29.4238 2.66331 30.1815 3.52231 30.4402 4.75843H49.1979C49.5121 4.14037 50.1034 3.71087 50.7687 3.71087C51.434 3.71087 52.0069 4.11942 52.3211 4.75843H260.042Z" fill="#666666"/>
             <path d="M0.964744 4.75842V6.85354C0.927117 6.50466 0.927117 6.15487 0.964744 5.80598C0.927117 5.4571 0.927117 5.10731 0.964744 4.75842Z" fill="#666666"/>
@@ -77,10 +77,10 @@
             <rect width="259.17" height="11.0203" fill="white" transform="translate(0.871338 0.316772)"/>
             </clipPath>
             </defs>
-          </svg>
-          <div class="">
+            </svg>
+          <div class="flex flex-col">
             <p
-              class="text-white desc sm:text-[18px] text-[14px] text-justify max-w-[350px] sm:max-w-full"
+              class="text-white desc sm:text-[18px] text-[14px] text-justify max-w-full sm:max-w-full mt-[24px]"
             >
               We are a forward-thinking Web-as-a-Service (WaaS) studio based in
               Asia, dedicated to pushing the boundaries of what's possible in
@@ -92,7 +92,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col lg:flex-row lg:gap-[110px] sm:items-center justify-center wedo-container">
+      <div class="flex flex-col lg:flex-row sm:items-center justify-center wedo-container">
         <div class="flex flex-col sm:min-w-[510px] wedo-desc">
           <h1
             class="text-white sm:text-[48px] text-[30px] mb-[12px] mt-[50px] lg:mt-[0px]"
@@ -164,10 +164,10 @@
           </svg>
           <div class="sm:mt-[65px] mt-[30px]">
             <div
-              class="lg:flex lg:gap-[70px] grid sm:grid-cols-2 sm:grid-rows-2 grid-rows-4 grid-cols-1 mb-[150px] sm:gap-[60px] gap-[30px]"
+              class="lg:flex lg:gap-[70px] grid sm:grid-cols-2 sm:grid-rows-2 grid-rows-4 grid-cols-1 mb-[150px] sm:gap-[60px] gap-[30px] c-chooseus"
             >
               <div
-                class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] border-round px-[25px] lg:mb-[40px]"
+                class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] border-round px-[25px] lg:mb-[40px] c-desc"
               >
                 <h1 class="text-[24px]">01 - Hassle Free</h1>
                 <p class="description-about-us">
@@ -178,7 +178,7 @@
                 </p>
               </div>
               <div
-                class="text-white sm:min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] lg:pt-[40px] m-[auto] border-round px-[25px]"
+                class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] lg:pt-[40px] m-[auto] border-round px-[25px]"
               >
                 <h1 class="text-[24px]">02 - Innovative</h1>
                 <p class="description-about-us">
@@ -188,7 +188,7 @@
                 </p>
               </div>
               <div
-                class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] m-[auto] border-round px-[25px] lg:mb-[40px]"
+                class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] m-[auto] border-round px-[25px] lg:mb-[40px] c-desc"
               >
                 <h1 class="text-[24px]">03 - Communication</h1>
                 <p class="description-about-us">
@@ -222,6 +222,10 @@
     color: white;
   }
 
+  .c-wedo-container {
+      gap: 50px;
+    }
+
   .description {
     font-family: "Open Sans", sans-serif;
     padding-top: 24px;
@@ -231,8 +235,6 @@
   .desc {
     font-family: "Open Sans", sans-serif;
   }
-
-  
 
   .description-about-us {
     font-size: 14px;
@@ -310,5 +312,50 @@
     .landing-img {
       max-height: 50vh;
     }
+
+    @media (max-height: 428px) {
+      .landing-img {
+        margin-top: 70px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  @media (width: 1024px) and (height: 768px) {
+    .c-title {
+      justify-content: unset;
+    }
+
+   .landing-img img {
+    padding-top: 100px;
+    max-height: none !important;
+    min-width: 100vh !important;
+   }
+  }
+
+  @media (width: 1180px) and (height: 820px) {
+    .wedo-container {
+      gap: 20px !important;
+    }
+
+    .c-chooseus {
+      display: grid;
+    }
+
+    .c-desc {
+      margin-bottom: 0px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .wedo-container {
+      gap: 110px;
+    }
+
+    .c-wedo-container {
+      gap: 150px;
+    }
+
+    
   }
 </style>

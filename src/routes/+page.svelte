@@ -15,8 +15,8 @@
   <div>
     <div id="landingpage" class="flex flex-col justify-between sticky z-50">
       <Header />
-      <div class="flex flex-col items-center justify-center flex-1 gap-[48px]">
-        <img class="w-[200px] h-[48px] sm:w-[362px] sm:h-[88px]" src="nl-fulllogo.png" alt="background" draggable="false" />
+      <div class="flex flex-col items-center justify-center flex-1 gap-[48px] landing-container">
+        <img class="w-[200px] h-[48px] sm:w-[362px] sm:h-[88px] nl-logo" src="nl-fulllogo.png" alt="background" draggable="false" />
         <h1 id="desc" class="text-[30px] sm:text-[48px]">Navigating the Web 3 Universe</h1>
       </div>
 
@@ -46,7 +46,7 @@
       </div>
     </div>
     <GenesisCollection />
-    <Roadmap class="z-10" />
+    <Roadmap />
     <Utility />
     <Explore />
     <Contact />
@@ -81,6 +81,31 @@
     }
     to {
       transform: translateY(-10px);
+    }
+  }
+
+  @media (max-height: 428px) {
+    .nl-logo {
+      height: 70px !important;
+      width: 300px !important;
+    }
+
+    .landing-container {
+      gap: 20px !important;
+      margin-top: 50px;
+    }
+
+    #desc {
+      font-size: 20px;
+    }
+
+    .jump {
+      width: 20px;
+      height: 30px;
+    }
+
+    #scroll-prompt {
+      font-size: 20px;
     }
   }
 </style>
