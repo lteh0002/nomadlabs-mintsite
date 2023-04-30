@@ -188,7 +188,7 @@
 
 <header
   id="nav"
-  class="h-[100px] flex items-center justify-between px-[20px] sm:px-[13vw] lg:px-[9vw] z-50 sticky-nav background"
+  class="h-[100px] flex items-center justify-between px-[20px] sm:px-[13vw] lg:px-[8vw] z-50 sticky-nav background"
 >
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <img

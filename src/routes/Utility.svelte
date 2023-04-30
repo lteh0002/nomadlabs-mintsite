@@ -45,11 +45,11 @@
 
         </div>
         <img
-          class="lg:w-[600px] lg:h-[600px] sm:h-[400px] sm:min-w-[620px] min-h-[450px] min-w-[350px] rounded-[50px]"
-          src="/walkietalkie.png"
-          alt="walkietalkie"
-          draggable="false"
-        />
+            class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px]"
+            src="/walkietalkie.png"
+            alt="walkietalkie"
+            draggable="false"
+          />
       </div>
     </div>
   </div>
