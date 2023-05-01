@@ -57,8 +57,8 @@
           About Us
         </div>
       </a>
-    {:else if $navigation === 'about'}
-    <a href="mailto:contact@nomadlabs.space">
+    {:else if $navigation === 'about' || $navigation === "service"}
+    <a href="/contact">
       <div
             class="border text-white h-[50px] w-[180px] flex justify-center items-center mt-[40px] button-hover"
           >
