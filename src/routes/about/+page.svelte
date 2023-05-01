@@ -164,7 +164,7 @@
           </svg>
           <div class="sm:mt-[65px] mt-[30px]">
             <div
-              class="lg:flex lg:gap-[70px] grid sm:grid-cols-2 sm:grid-rows-2 grid-rows-4 grid-cols-1 mb-[150px] sm:gap-[60px] gap-[30px] c-chooseus"
+              class="lg:flex grid sm:grid-cols-2 sm:grid-rows-2 grid-rows-4 grid-cols-1 mb-[150px] sm:gap-[60px] gap-[30px] c-chooseus"
             >
               <div
                 class="text-white min-w-[250px] w-[250px] max-h-[300px] h-[300px] border flex flex-col pt-[30px] border-round px-[25px] lg:mb-[40px] c-desc"
@@ -354,6 +354,10 @@
 
     .c-wedo-container {
       gap: 70px;
+    }
+
+    .c-chooseus{
+      gap: 50px;
     }
 
     
