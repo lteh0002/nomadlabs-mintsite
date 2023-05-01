@@ -304,7 +304,7 @@
     }
 
     .nav-option {
-      margin-top: 40px;
+      margin-top: 35px;
       font-size: 20px !important;
     }
 

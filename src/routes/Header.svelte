@@ -82,7 +82,7 @@
   </div>
 
   <div class="sm:pl-[60px] pl-[30px]">
-    <ul class="text-white sm:mt-[100px] mt-[80px] flex flex-col gap-[10px] nav-option">
+    <ul class="text-white sm:mt-[100px] mt-[80px] flex flex-col gap-[8px] nav-option">
       <li>
         <a
           class='{$navigation == "home" ? "text-[white]" : "text-[grey]"} nav-selection'
@@ -351,7 +351,7 @@
     }
 
     .nav-option {
-      margin-top: 40px;
+      margin-top: 35px;
       font-size: 20px !important;
     }
 
