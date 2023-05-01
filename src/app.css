@@ -77,3 +77,9 @@ html, body {
   align-items: center;
   padding: 0px;
 }
+
+@media screen and (orientation: landscape) {
+  body {
+    width: 100%;
+  }
+}
