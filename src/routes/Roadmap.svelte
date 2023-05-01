@@ -32,7 +32,7 @@
         alt="nomadspeech"
         draggable="false"
       />
-      <div class="flex flex-col lg:justify-center min-w-[500px] first_div mt-[50px] lg:mt-[0px] m-auto">
+      <div class="flex flex-col lg:justify-center min-w-[500px] first_div lg:mt-[0px] m-auto">
         <h1
           class="text-white sm:text-[48px] text-[30px] mb-[20px] mt-[45px] lg:mt-0"
         >
