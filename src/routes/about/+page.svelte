@@ -349,11 +349,11 @@
 
   @media (min-width: 1024px) {
     .wedo-container {
-      gap: 110px;
+      gap: 70px;
     }
 
     .c-wedo-container {
-      gap: 150px;
+      gap: 70px;
     }
 
     
