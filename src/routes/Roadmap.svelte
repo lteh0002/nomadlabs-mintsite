@@ -23,9 +23,9 @@
 </script>
 
 <div class="bg-[#111111] min-w-[100vw] min-h-[600px] pt-[150px]">
-  <div class="lg:px-[350px] sm:px-[100px] px-[20px] c-container">
+  <div class="px-[20px] c-container">
     <div class="flex flex-col item gap-[150px]">
-      <div class="flex lg:flex-row flex-col lg:gap-[110px] justify-center container">
+      <div class="flex lg:flex-row flex-col lg:gap-[70px] justify-center container">
         <img
         class="lg:min-w-[600px] lg:min-h-[600px] max-h-[400px] w-[620px] rounded-[50px] m-auto"
         src="/nomadspeech.png"
@@ -116,6 +116,25 @@
     .c-container {
       padding-left: 0px;
       padding-right: 0px;
+    }
+  }
+
+  @media (width: 1024px) and (height: 1366px) {
+    .c-container {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }  
+
+  @media (min-width: 640px) {
+    .c-container {
+      padding: 0px 100px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .c-container {
+      padding: 0px 350px;
     }
   }
 

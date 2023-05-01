@@ -1,6 +1,6 @@
 <div class="bg-[#111111] min-w-[100vw] min-h-[600px] pt-[150px] pb-[150px]">
   <div class="lg:px-[350px] sm:px-[100px] px-[20px] c-container">
-    <div class="flex flex-col item gap-[150px]">
+    <div class="flex flex-col gap-[150px]">
       <div class="flex lg:flex-row flex-col justify-center container">
         <div class="flex flex-col lg:justify-center min-w-[500px] first_div mt-[50px] lg:mt-[0px] m-auto">
           <h1 class="text-white sm:text-[48px] text-[30px] mb-[20px]">Utility</h1>
@@ -112,9 +112,29 @@
     }
   }
 
+  @media (width: 1024px) and (height: 1366px) {
+    .c-container {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }  
+
+  @media (min-width: 640px) {
+    .c-container {
+      padding: 0px 100px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .c-container {
+      padding: 0px 350px;
+    }
+  }
+
+
   @media (min-width: 1024px) {
     .container {
-      gap: 110px;
+      gap: 70px;
     }
   }
 </style>
